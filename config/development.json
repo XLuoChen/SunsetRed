@@ -2,9 +2,6 @@
   "App": {
     "dbConfig": {
       "dbName": "sunset"
-    },
-    "credit": {
-      "initialDays": 30
     }
   }
 }

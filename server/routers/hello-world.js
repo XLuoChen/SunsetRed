@@ -6,8 +6,8 @@ const router = express.Router();
 
 router.get('/hello', (req, res)=> {
   findData((result) => {
-    res.json(result)
-  })
+    res.json(result);
+  });
 });
 
 module.exports = router;
