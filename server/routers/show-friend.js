@@ -1,4 +1,4 @@
-const findData = require('../dbs/find-from-db');
+const findData = require('../dbs/show-friend');
 
 const express = require('express');
 
