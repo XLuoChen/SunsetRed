@@ -1,8 +1,5 @@
-const findData = require('../server/dbs/find-from-db');
+const findData = require('../../server/dbs/find-from-db');
 const expect = require('chai').expect;
-const MongoClient = require('mongodb').MongoClient;
-
-const url = 'mongodb://localhost:27017/sunset';
 
 describe('GET /', function () {
 

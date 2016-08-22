@@ -2,9 +2,9 @@
   "name": "todo-list-first",
   "version": "1.0.0",
   "license": "ISC",
-  "main": "ser.js",
+  "main": "server.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test/**/*test.js",
     "start": "nodemon server.js",
     "webpack": "webpack -d --watch",
     "wpw": "webpack -w",

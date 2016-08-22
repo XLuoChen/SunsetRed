@@ -7,7 +7,7 @@ const hello = require('./server/routers/hello-world');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static('./client'));
+app.use(express.static('./public'));
 
 app.use('/', hello);
 
