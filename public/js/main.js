@@ -4,14 +4,11 @@ import {createStore, applyMiddleware} from 'redux';
 import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from "./containers/App";
-import Hello from './containers/Hello';
-import reducer from "./reducers/reducer";
+import reducer from "./reducers/index";
 import HomePage from './components/HomePage';
 import getValue from "./middlewares/get-value";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from './containers/Traveller';
-
-import MoodDiary from './components/MoodDiaries';
 
 const createStoreWithMiddleware = applyMiddleware(getValue)(createStore);
 
@@ -23,8 +20,6 @@ render(
       <Route path="/" component={App}>
         <IndexRoute component={HomePage}/>
         <Route path='/moodDiary' component={MoodDiaries}/>
-        <Route path="/hello" component={Hello}/>
-        <Route path="/moodDiary" component={MoodDiary}/>
         <Route path="/traveller" component={Traveller}/>
       </Route>
     </Router>
