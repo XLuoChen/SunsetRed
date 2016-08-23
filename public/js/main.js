@@ -10,8 +10,6 @@ import HomePage from './components/HomePage';
 import getValue from "./middlewares/get-value";
 import MoodDiaries from "./containers/MoodDiaries";
 
-import MoodDiary from './components/MoodDiaries';
-
 const createStoreWithMiddleware = applyMiddleware(getValue)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
@@ -23,7 +21,6 @@ render(
         <IndexRoute component={HomePage}/>
         <Route path='/moodDiary' component={MoodDiaries}/>
         <Route path="/hello" component={Hello}/>
-        <Route path="/moodDiary" component={MoodDiary}/>
       </Route>
     </Router>
 
