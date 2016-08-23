@@ -9,3 +9,5 @@ before_script:
 
 notifications:
    webhooks: https://hook.bearychat.com/=bw70L/travis/c4d67928f55847a63f152aae6af43960
+notifications:
+  webhooks: https://hook.bearychat.com/=bw70L/travis/30ab19f551244d6fec77b5939f182e46
