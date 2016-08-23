@@ -4,7 +4,6 @@ import {createStore, applyMiddleware} from 'redux';
 import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from "./containers/App";
-import Hello from './containers/Hello';
 import reducer from "./reducers/index";
 import HomePage from './components/HomePage';
 import getValue from "./middlewares/get-value";
@@ -20,7 +19,6 @@ render(
       <Route path="/" component={App}>
         <IndexRoute component={HomePage}/>
         <Route path='/moodDiary' component={MoodDiaries}/>
-        <Route path="/hello" component={Hello}/>
       </Route>
     </Router>
 

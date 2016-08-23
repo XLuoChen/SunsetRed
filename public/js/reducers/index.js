@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import moodDiary from './moodDiary';
+import moodDiaries from './moodDiary';
 import showHappiness from './show-happiness';
 
-export default combineReducers({moodDiary, showHappiness});
+export default combineReducers({moodDiaries, showHappiness});
