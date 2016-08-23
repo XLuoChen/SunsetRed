@@ -10,7 +10,7 @@ import HomePage from './components/HomePage';
 import getValue from "./middlewares/get-value";
 import MakeFriends from './containers/MakeFriends';
 import getFriendsInformation from './middlewares/get-friend-information';
-import showFriend from './reducers/show-friend-test';
+import showFriend from './reducers/show-friend';
 
 const createStoreWithMiddleware = applyMiddleware(getValue, getFriendsInformation)(createStore);
 

@@ -1,4 +1,4 @@
-const reducer = require('../../public/js/reducers/show-friend-test');
+const reducer = require('../../public/js/reducers/show-friend');
 const expect = require('chai').expect;
 
 describe('friend', function () {
