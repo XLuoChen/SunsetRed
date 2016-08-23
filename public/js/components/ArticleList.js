@@ -7,6 +7,7 @@ export default class ArticleList extends Component {
   }
 
   render() {
+    // {console.log(this.props.articles);}
     const articles = this.props.articles.map((article, index)=> {
       return <div key={index}>
         <h3>{article.title}</h3>

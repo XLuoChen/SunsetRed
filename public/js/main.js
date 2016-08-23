@@ -10,10 +10,11 @@ import getFriendsInformation from './middlewares/get-friend-information';
 import reducer from './reducers/index';
 import HappinessShare from './containers/HappinessShare';
 import setHappiness from "./middlewares/set-happiness";
+import getArticleList from './middlewares/get-articleList'
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from './containers/Traveller';
 
-const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness)(createStore);
+const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness,getArticleList)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
