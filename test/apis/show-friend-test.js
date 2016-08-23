@@ -14,11 +14,9 @@ describe('server', () => {
   beforeEach(function () {
     mongoClient.connect(url, (err, db)=> {
       const collection = db.collection('friend');
-      collection.removeMany({});
-
-      mongoClient.connect(url, (err, db)=> {
-        const collection = db.collection('friend');
+      collection.removeMany({}, () => {
         collection.insert(defaultFriends, (err, result)=> {
+          console.log("err", err);
           db.close();
         });
       });
