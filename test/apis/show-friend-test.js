@@ -19,8 +19,8 @@ describe('server', () => {
       mongoClient.connect(url, (err, db)=> {
         const collection = db.collection('friend');
         collection.insert(defaultFriends, (err, result)=> {
+          db.close();
         });
-        db.close();
       });
     });
 
