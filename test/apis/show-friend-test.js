@@ -13,7 +13,7 @@ describe('server', () => {
 
   beforeEach(function (done) {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('friend');
+      const collection = db.collection('friends');
       collection.removeMany({}, () => {
         collection.insert(defaultFriends, (err, result)=> {
           db.close();
@@ -30,11 +30,5 @@ describe('server', () => {
       .get('/friends')
       .expect(200, '[{"name":"高乐","sex":"女","city":"西安"},{"name":"黄丽珍","sex":"女","city":"西安"},{"name":"赵路","sex":"女","city":"西安"},{"name":"刘一林","sex":"女","city":"西安"}]', done);
 
-  });
-
-  it('404 everything else', function testPath(done) {
-    request(server)
-      .get('/foo/bar')
-      .expect(404, done);
   });
 });
