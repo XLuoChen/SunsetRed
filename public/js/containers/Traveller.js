@@ -1,8 +1,6 @@
-/**
- * Created by yangzhanmei on 16-8-23.
- */
-const $ = React.createClass({
-    render(){
-        return (<div>$</div>)
-    }
-});
+import React, {Component} from "react";
+import {connect} from "react-redux";
+import Traveller from "../components/Traveller";
+
+
+export default connect()(Traveller);

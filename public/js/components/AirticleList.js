@@ -1,8 +1,9 @@
-/**
- * Created by yangzhanmei on 16-8-23.
- */
-const $ = React.createClass({
+import React,{Component} from 'react';
+
+export default class AirticleList extends Component{
     render(){
-        return (<div>$</div>)
+        return <div>
+            AirticleList
+        </div>
     }
-});
+}

@@ -9,6 +9,7 @@ import reducer from "./reducers/reducer";
 import HomePage from './components/HomePage';
 import getValue from "./middlewares/get-value";
 import MoodDiaries from "./containers/MoodDiaries";
+import Traveller from './containers/Traveller';
 
 import MoodDiary from './components/MoodDiaries';
 
@@ -24,6 +25,7 @@ render(
         <Route path='/moodDiary' component={MoodDiaries}/>
         <Route path="/hello" component={Hello}/>
         <Route path="/moodDiary" component={MoodDiary}/>
+        <Route path="/traveller" component={Traveller}/>
       </Route>
     </Router>
 
