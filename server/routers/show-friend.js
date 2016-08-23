@@ -6,7 +6,6 @@ const router = express.Router();
 
 router.get('/friends', (req, res)=> {
   findData((result) => {
-    console.log(result);
     res.json(result);
   });
 });
