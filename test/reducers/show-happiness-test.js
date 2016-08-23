@@ -7,14 +7,14 @@ describe('happiness', function () {
     const action = {
       type: "SET_HAPPINESS",
       data: {
-        name: "Jake", image: "../../public/images/a.jpg",
+        name: "Jake", image: "../../public/images/happiness-pictures/a.jpg",
         text: "晒幸福", likedCount: 20
       }
     };
     expect(reducer(state, action)).to.be.deep.equal({
       data: {
         name: "Jake",
-        image: "../../public/images/a.jpg",
+        image: "../../public/images/happiness-pictures/a.jpg",
         text: "晒幸福", likedCount: 20
       }
     });

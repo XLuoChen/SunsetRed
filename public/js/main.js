@@ -8,10 +8,13 @@ import Hello from './containers/Hello';
 import reducer from "./reducers/reducer";
 import HomePage from './components/HomePage';
 import getValue from "./middlewares/get-value";
+import setHappiness from "./middlewares/set-happiness";
+import HappinessShare from './containers/HappinessShare';
+import showHappiness from './reducers/show-happiness';
 
-const createStoreWithMiddleware = applyMiddleware(getValue)(createStore);
+const createStoreWithMiddleware = applyMiddleware(setHappiness)(createStore);
 
-const store = createStoreWithMiddleware(reducer);
+const store = createStoreWithMiddleware(showHappiness);
 
 render(
   <Provider store={store}>
@@ -19,8 +22,10 @@ render(
       <Route path="/" component={App}>
         <IndexRoute component={HomePage}/>
         <Route path="/hello" component={Hello}/>
+        <Route path="/happiness" component={HappinessShare}/>
       </Route>
     </Router>
-
   </Provider>
   , document.getElementById('app'));
+
+export {store}

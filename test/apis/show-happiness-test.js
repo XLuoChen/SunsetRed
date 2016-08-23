@@ -6,12 +6,12 @@ describe('server', () => {
   let server;
 
   const defaultHappiness = [
-    {name: "Jake", image: "../../public/images/a.jpg", text: "晒幸福", likedCount: 20}, {
+    {name: "Jake", image: "../../public/images/happiness-pictures/a.jpg", text: "晒幸福", likedCount: 20}, {
       name: "Lily",
-      image: "../../public/images/b.jpg",
+      image: "../../public/images/happiness-pictures/b.jpg",
       text: "晒幸福",
       likedCount: 12
-    }, {name: "John", image: "../../public/images/c.jpg", text: "晒幸福", likedCount: 37}
+    }, {name: "John", image: "../../public/images/happiness-pictures/c.jpg", text: "晒幸福", likedCount: 37}
   ];
 
   beforeEach(function (done) {

@@ -2,7 +2,7 @@ function reducer(state = {filterHappiness: []}, action) {
   switch (action.type) {
     case "SET_HAPPINESS":
       return {
-        data: action.data
+        filterHappiness: [...action.data]
       }
   }
 
