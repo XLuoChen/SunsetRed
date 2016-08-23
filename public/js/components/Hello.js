@@ -6,7 +6,6 @@ class Value extends Component {
       <div>
         <button onClick={this.props.onGet} className="btn btn-info">快点我吧</button>
         <span>{this.props.value}</span>
-        <Link to = '/moodDiary'> moodDiary</Link>
       </div>
     );
   }

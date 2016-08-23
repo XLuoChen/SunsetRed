@@ -14,22 +14,18 @@ describe('server', () => {
     }, {name: "John", image: "../../public/images/c.jpg", text: "晒幸福", likedCount: 37}
   ];
 
-  beforeEach(function () {
+  beforeEach(function (done) {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('hello');
-      collection.insert(defaultHappiness, (err, result)=> {
+      const collection = db.collection('happinessCol');
+      collection.removeMany({}, () => {
+        collection.insert(defaultHappiness, (err, result)=> {
+          db.close();
+          done();
+        });
       });
-      db.close();
     });
-    server = require('../../server');
-  });
 
-  afterEach(function () {
-    mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('hello');
-      collection.removeMany({});
-      db.close();
-    })
+    server = require('../../server');
   });
 
   it('responds to /happiness', function testSlash(done) {
