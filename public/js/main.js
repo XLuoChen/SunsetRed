@@ -6,6 +6,7 @@ import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from "./containers/App";
 import Hello from './containers/Hello';
 import reducer from "./reducers/reducer";
+import HomePage from './components/HomePage';
 import getValue from "./middlewares/get-value";
 
 const createStoreWithMiddleware = applyMiddleware(getValue)(createStore);
@@ -16,7 +17,10 @@ render(
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={App}>
-        <IndexRoute component={Hello}/>
+        <IndexRoute component={HomePage}/>
+        <Route path="/hello" component={Hello}/>
       </Route>
     </Router>
-  </Provider>, document.getElementById('app'));
+
+  </Provider>
+  , document.getElementById('app'));

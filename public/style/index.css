@@ -1,21 +1,25 @@
-div{
+div {
   padding: 0px !important;
 }
 
-#navbar{
+#navbar {
   background-color: #abafe8;
   font-size: 20px;
 }
 
-.navbar-header{
-  margin-left: 100px;
+.navbar-header {
+  margin-left: 60px;
 }
 
-.navbar-brand{
-  margin-left: 35px;
+.navbar-brand {
+  margin-left: 20px;
   font-size: 20px !important;
 }
 
-#navbar img{
+#homeImg {
+  width: 100%;
+}
+
+#navbar img {
   width: 60px;;
 }
