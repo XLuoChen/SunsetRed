@@ -3,7 +3,7 @@ import HappinessShare from '../components/HappinessShare';
 
 const mapStateToProps = (state)=> {
   return {
-    filterHappiness: state.filterHappiness
+    filterHappiness: state.showHappiness.filterHappiness
   };
 };
 

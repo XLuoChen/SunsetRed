@@ -1,8 +1,8 @@
-function reducer(state = {value:''}, action) {
-  switch(action.type){
+function reducer(state = {value: ''}, action) {
+  switch (action.type) {
     case "GETTVALUE":
       return {
-        value : action.value
+        value: action.value
       };
   }
   return state;

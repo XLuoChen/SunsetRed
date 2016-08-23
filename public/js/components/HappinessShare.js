@@ -2,12 +2,12 @@ import React, {Component} from "react";
 import {store} from '../main';
 
 export default class HappinessShare extends Component {
-  componentDidMount(){
-    store.dispatch({type:'SET_HAPPINESS'});
+  componentDidMount() {
+    store.dispatch({type: 'SET_HAPPINESS'});
   }
 
-  setFilterHappiness(){
-    store.dispatch({type:'SET_HAPPINESS'});
+  setFilterHappiness() {
+    store.dispatch({type: 'SET_HAPPINESS'});
   }
 
   render() {
@@ -25,12 +25,13 @@ export default class HappinessShare extends Component {
           </button>
         </div>
       </div>
-      </div>
+    </div>
   }
 }
 
 class HappinessList extends Component {
   render() {
+
     const happinessList = this.props.filterHappiness.map((item, index) => {
       return <div key={index}>
         <PersonShow happinessItem={item}/>

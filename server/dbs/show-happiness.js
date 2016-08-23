@@ -5,6 +5,7 @@ function findData(callback) {
   MongoClient.connect(url, function (err, db) {
     const collection = db.collection('happinessCol');
     collection.find({}, {_id: 0}).toArray(function (err, result) {
+      console.log(result)
       const allHappiness = result.map(happinessItem => {
         return {
           name: happinessItem.name,
