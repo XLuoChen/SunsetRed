@@ -1,0 +1,52 @@
+.happinessShare {
+    background-color: transparent;
+}
+
+.happiness img {
+    width: 300px;
+    height: 200px;
+}
+
+.happinessList {
+    width: 80%;
+    overflow: hidden;
+    zoom: 1;
+    margin: 0 auto;
+}
+
+.happiness {
+    width: 300px;
+    height: 230px;
+    border-radius: 6px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    zoom: 1;
+    margin: 10px 20px;
+}
+
+.happinessTag {
+    height: 30px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.personShow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+.happiness:hover .personShow {
+    width: 300px;
+    height: 230px;
+    border-radius: 6px;
+    background: #000;
+    text-align: center;
+    color: #fff;
+    filter: alpha(opacity=60);
+    -moz-opacity: 0.6;
+    opacity: 0.6;
+    visibility: visible;
+}

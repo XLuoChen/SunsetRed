@@ -7,10 +7,12 @@ import App from "./containers/App";
 import reducer from "./reducers/index";
 import HomePage from './components/HomePage';
 import getArticles from "./middlewares/get-articleList";
+import HappinessShare from './containers/HappinessShare';
+import setHappiness from "./middlewares/set-happiness";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from './containers/Traveller';
 
-const createStoreWithMiddleware = applyMiddleware(getArticles)(createStore);
+const createStoreWithMiddleware = applyMiddleware(setHappiness, getArticles)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
@@ -19,11 +21,11 @@ render(
     <Router history={hashHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={HomePage}/>
+        <Route path="/happiness" component={HappinessShare}/>
         <Route path='/moodDiary' component={MoodDiaries}/>
         <Route path="/traveller" component={Traveller}/>
       </Route>
     </Router>
-
   </Provider>
   , document.getElementById('app'));
 
