@@ -6,11 +6,11 @@ import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from "./containers/App";
 import reducer from "./reducers/index";
 import HomePage from './components/HomePage';
-import getValue from "./middlewares/get-value";
+import getArticles from "./middlewares/get-articleList";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from './containers/Traveller';
 
-const createStoreWithMiddleware = applyMiddleware(getValue)(createStore);
+const createStoreWithMiddleware = applyMiddleware(getArticles)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
@@ -26,3 +26,5 @@ render(
 
   </Provider>
   , document.getElementById('app'));
+
+export {store}

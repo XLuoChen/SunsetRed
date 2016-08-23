@@ -5,7 +5,6 @@ function reducer(state = {filterHappiness: []}, action) {
         data: action.data
       }
   }
-
   return state;
 }
 

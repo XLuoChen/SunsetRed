@@ -1,6 +1,12 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import Traveller from "../components/Traveller";
+import React, {Component} from 'react';
+import ArticleList from '../containers/ArticleList';
+import Menu from '../components/Menu';
 
-
-export default connect()(Traveller);
+export default class Traveller extends Component {
+  render() {
+    return <div>
+      <Menu/>
+      <ArticleList/>
+    </div>
+  }
+}
