@@ -3,8 +3,8 @@ import {connect} from 'react-redux';
 
 const mapStateToProps =(state)=>{
   return{
-    value:state.value
+    value:state.showFriends.value
   }
-}
+};
 
 export default connect(mapStateToProps)(FriendList);

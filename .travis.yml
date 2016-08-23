@@ -13,3 +13,5 @@ notifications:
   webhooks: https://hook.bearychat.com/=bw70L/travis/30ab19f551244d6fec77b5939f182e46
 notifications:
   webhooks: https://hook.bearychat.com/=bw70L/travis/8ea82c122876d0244d16ae0f31387dc0
+notifications:
+    webhooks: https://hook.bearychat.com/=bw70L/travis/90c7044fe1c3fa09e578c4f689fc4c48

@@ -29,6 +29,5 @@ describe('server', () => {
     request(server)
       .get('/friends')
       .expect(200, '[{"name":"高乐","sex":"女","city":"西安"},{"name":"黄丽珍","sex":"女","city":"西安"},{"name":"赵路","sex":"女","city":"西安"},{"name":"刘一林","sex":"女","city":"西安"}]', done);
-
   });
 });

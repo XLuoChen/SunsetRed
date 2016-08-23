@@ -4,7 +4,7 @@ import {store} from '../main';
 
 export default class MakeFriends extends Component {
   componentDidMount() {
-    store.dispatch({type: 'SET_FRIENDS'})
+    store.dispatch({type: 'SET_FRIENDS'});
   }
 
   render() {
