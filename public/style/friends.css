@@ -1,0 +1,58 @@
+.findFriendConditon{
+  cursor: pointer;
+}
+
+.box {
+  margin: 0;
+  overflow: hidden;
+  float: left;
+  position: relative;
+}
+
+.box a {
+  text-decoration: none;
+  float: left;
+}
+
+.box a:hover {
+  cursor: pointer;
+}
+
+.box a img {
+  float: left;
+  margin: 0;
+  border: none;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.box a:hover .www-A1 {
+  display: block;
+  font-size: 12px;
+  padding: 10px 0px;
+  background: #111;
+  filter: alpha(opacity=75);
+  opacity: .75;
+  color: #fff;
+  position: absolute;
+  padding: 10px;
+  margin: 11px 11px 11px 11px;
+  width: 190px;
+  height: 280px;
+  border-top: 1px solid #999;
+}
+
+.box a:hover .www-A1 {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.box a .www-A1 {
+  display: none;
+}
+.friendImg{
+  width:210px;
+  height:300px;
+}

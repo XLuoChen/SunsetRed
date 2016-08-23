@@ -10,8 +10,8 @@ export default class NavigatorBar extends Component {
         </div>
         <ul className="nav navbar-nav navbar-left">
           <Link to='/' className="navbar-brand" href="#">首页</Link>
-          <Link to='/' href="#" className="navbar-brand"> 个人中心</Link>
-          <Link to='/' href="#" className="navbar-brand"> 交友</Link>
+          <Link to='/hello' href="#" className="navbar-brand"> 个人中心</Link>
+          <Link to='/friends' href="#" className="navbar-brand"> 交友</Link>
           <Link to='/happiness' href="#" className="navbar-brand"> 晒幸福</Link>
           <Link to='/MoodDiary' href="#" className="navbar-brand"> 心情日记</Link>
           <Link to='/' href="#" className="navbar-brand"> 健康是福</Link>

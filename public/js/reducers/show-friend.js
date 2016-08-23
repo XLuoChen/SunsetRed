@@ -1,6 +1,6 @@
-function reducer(state = {value: ''}, action) {
+function reducer(state = {value: []}, action) {
   switch (action.type) {
-    case "GETTVALUE":
+    case "SET_FRIENDS":
       return {
         value: action.value
       };

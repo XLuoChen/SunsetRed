@@ -13,7 +13,7 @@ describe('server', () => {
 
   beforeEach(function (done) {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('friend');
+      const collection = db.collection('friends');
       collection.removeMany({}, () => {
         collection.insert(defaultFriends, (err, result)=> {
           db.close();
@@ -25,9 +25,9 @@ describe('server', () => {
     server = require('../../server');
   });
 
-  it('responds to /friend', function testSlash(done) {
+  it('responds to /friends', function testSlash(done) {
     request(server)
-      .get('/friend')
+      .get('/friends')
       .expect(200, '[{"name":"高乐","sex":"女","city":"西安"},{"name":"黄丽珍","sex":"女","city":"西安"},{"name":"赵路","sex":"女","city":"西安"},{"name":"刘一林","sex":"女","city":"西安"}]', done);
   });
 });
