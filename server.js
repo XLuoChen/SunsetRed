@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const app = new express();
 
 const hello = require('./server/routers/hello-world');
@@ -15,6 +16,10 @@ app.use('/', hello);
 app.use('/', friend);
 app.use('/', happiness);
 app.use('/', moodDiaries);
+
+app.get('*', function (request, response){
+  response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
 
 var server = app.listen(3000, function () {
   console.log('listening at port %s', server.address().port);
