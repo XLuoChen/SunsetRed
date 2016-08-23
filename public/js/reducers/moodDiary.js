@@ -1,8 +1,8 @@
-function reducer(state = {moodDiary:[]}, action) {
+function reducer(state = {moodDiaries:[]}, action) {
   switch(action.type){
     case "SET_DIARIES":
       return {
-        moodDiary : [{name:'baiying',title:'我的心情',content:'我很好',sort:'情感天地'}]
+        moodDiaries : action.moodDiaries
       };
   }
   return state;
