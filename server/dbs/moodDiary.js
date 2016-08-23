@@ -3,9 +3,9 @@ const MongoClient = require('../helpers/mongodb');
 
 function findData(callback) {
   MongoClient.connect(url, function (err, db) {
-    const collection = db.collection('hello');
-    collection.find({}).toArray(function (err, result) {
-      callback(result[0].hello);
+    const collection = db.collection('diarycol');
+    collection.find({}, {_id: 0}).toArray(function (err, result) {
+      callback(result);
     });
   });
 }
