@@ -11,13 +11,13 @@ describe('server', () => {
     {name: "赵路", sex: "女", city: "西安"},
     {name: "刘一林", sex: "女", city: "西安"}];
 
-  beforeEach(function () {
+  beforeEach(function (done) {
     mongoClient.connect(url, (err, db)=> {
       const collection = db.collection('friend');
       collection.removeMany({}, () => {
         collection.insert(defaultFriends, (err, result)=> {
-          console.log("err", err);
           db.close();
+          done();
         });
       });
     });
