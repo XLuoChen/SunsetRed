@@ -1,8 +1,9 @@
-const findData = require('../dbs/show-happiness');
+// const findData = require('../dbs/show-happiness');
 const express = require('express');
 const router = express.Router();
 
 router.get('/happiness', (req, res)=> {
+  // findData((result) => {
   let result = [{name: "Jake", image: "../../public/images/a.jpg", text: "晒幸福", likedCount: 20}, {
     name: "Lily",
     image: "../../public/images/b.jpg",
@@ -12,5 +13,6 @@ router.get('/happiness', (req, res)=> {
 
   res.json(result);
 });
+// });
 
 module.exports = router;
