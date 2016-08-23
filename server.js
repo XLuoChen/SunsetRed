@@ -20,7 +20,7 @@ app.get('*', function (request, response) {
   response.sendFile(path.resolve(__dirname, 'public', 'index.html'))
 });
 
-var server = app.listen(3000, function () {
+var server = app.listen(5000, function () {
   console.log('listening at port %s', server.address().port);
 });
 
