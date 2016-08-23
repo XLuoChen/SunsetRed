@@ -13,7 +13,7 @@ describe('server', () => {
 
   beforeEach(function () {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('hello');
+      const collection = db.collection('friend');
       collection.insert(defaultFriends, (err, result)=> {
       });
       db.close();
@@ -23,7 +23,7 @@ describe('server', () => {
 
   afterEach(function () {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('hello');
+      const collection = db.collection('friend');
       collection.removeMany({});
       db.close();
     })
