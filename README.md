@@ -1,4 +1,5 @@
 #Sunset Red
+[![Build Status](https://travis-ci.org/sunset-red/new-sunset-red.svg?branch=master)](https://travis-ci.org/sunset-red/new-sunset-red)
 
 #一个专注老年人的社交平台
 
@@ -16,5 +17,3 @@
 ```
 4. npm start
 ```
-
-[![Build Status](https://travis-ci.org/michaelliao/openweixin.svg?branch=master)](https://travis-ci.org/michaelliao/openweixin)

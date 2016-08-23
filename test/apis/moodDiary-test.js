@@ -18,12 +18,9 @@ describe('server', () => {
     server = require('../../server');
   });
 
-  it('responds to /moodDiaries',  (done)=>{
+  it('responds to /moodDiaries', (done)=> {
     request(server)
       .get('/moodDiaries')
-      .expect(200, '[{"name":"baiying","title":"我的心情","content":"我很好","sort":"情感天地"}]',done);
-
+      .expect(200, '[{"name":"baiying","title":"我的心情","content":"我很好","sort":"情感天地"}]', done);
   });
-
-
 });
