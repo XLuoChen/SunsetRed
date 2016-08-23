@@ -7,6 +7,7 @@ import App from "./containers/App";
 import Hello from './containers/Hello';
 import reducer from "./reducers/reducer";
 import getValue from "./middlewares/get-value";
+import MoodDiaries from "./containers/MoodDiaries";
 
 const createStoreWithMiddleware = applyMiddleware(getValue)(createStore);
 
@@ -17,6 +18,7 @@ render(
     <Router history={hashHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={Hello}/>
+        <Route path='/moodDiary' component={MoodDiaries}/>
       </Route>
     </Router>
   </Provider>, document.getElementById('app'));

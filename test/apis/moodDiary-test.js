@@ -5,22 +5,17 @@ const mongoClient = require('../../server/helpers/mongodb');
 describe('server', () => {
   let server;
 
-  beforeEach(function () {
+  beforeEach(function (done) {
     mongoClient.connect(url, (err, db)=> {
       const collection = db.collection('diarycol');
-      collection.insert([{name:'baiying',title:'我的心情',content:'我很好',sort:'情感天地'}], (err, result)=> {
+      collection.removeMany({}, () => {
+        collection.insert([{name: "baiying", title: 我的心情, content: "我很好", sort: "情感天地"}], (err, result)=> {
+          db.close();
+          done();
+        });
       });
-      db.close();
     });
     server = require('../../server');
-  });
-
-  afterEach(function () {
-    mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('diarycol');
-      collection.removeMany({});
-      db.close();
-    })
   });
 
   it('responds to /moodDiaries', function testSlash(done) {
