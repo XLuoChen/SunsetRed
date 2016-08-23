@@ -5,7 +5,7 @@ import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import App from "./containers/App";
 import Hello from './containers/Hello';
-import reducer from "./reducers/reducer";
+import reducer from "./reducers/index";
 import HomePage from './components/HomePage';
 import getValue from "./middlewares/get-value";
 import MoodDiaries from "./containers/MoodDiaries";
