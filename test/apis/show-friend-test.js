@@ -14,19 +14,17 @@ describe('server', () => {
   beforeEach(function () {
     mongoClient.connect(url, (err, db)=> {
       const collection = db.collection('friend');
-      collection.insert(defaultFriends, (err, result)=> {
-      });
-      db.close();
-    });
-    server = require('../../server');
-  });
-
-  afterEach(function () {
-    mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('friend');
       collection.removeMany({});
-      db.close();
-    })
+
+      mongoClient.connect(url, (err, db)=> {
+        const collection = db.collection('friend');
+        collection.insert(defaultFriends, (err, result)=> {
+        });
+        db.close();
+      });
+    });
+
+    server = require('../../server');
   });
 
   it('responds to /friend', function testSlash(done) {
