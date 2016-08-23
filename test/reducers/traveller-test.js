@@ -13,8 +13,6 @@ describe('traveller', () => {
       "commentCount": 13
     }];
     const action = {type: 'ACTICLELIST', articles};
-    expect(traveller(state, action)).to.be.deep.equal({
-      articles: articles
-    });
+    expect(traveller(state, action)).to.be.deep.equal({articles});
   });
 });
