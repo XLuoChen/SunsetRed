@@ -3,7 +3,7 @@ import {store} from '../main';
 
 export default class ArticleList extends Component {
   componentDidMount() {
-    store.dispatch({type: 'GET_ARTICLES'});
+    this.props.renderArticles();
   }
 
   render() {
