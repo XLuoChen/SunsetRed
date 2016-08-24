@@ -7,8 +7,8 @@ export default store => next => action => {
         next({type: "SET_FRIENDS", friends: res.body})
       });
   } else if (action.type === "SEARCH") {
-    request.post('/friends')
-      .send({condition: action.condition})
+    request.get('/findFriends')
+      .query({condition: action.condition})
       .end((err, res) => {
         next({type: "SET_FRIENDS", friends: res.body})
       });
