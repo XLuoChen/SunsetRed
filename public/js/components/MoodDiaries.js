@@ -9,7 +9,7 @@ export default class MoodDiary extends Component {
     return <div className="row">
       <div className="col-md-6 col-md-offset-3">
         <center>
-          <button className="btn btn-primary">写心情日记</button>
+         <Link to="/writeDiaryPage"> <button className="btn btn-primary" style={{width:'500px',margin:'30px'}}>写心情日记&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="glyphicon glyphicon-pencil" aria-hidden="true"></span></button></Link>
         </center>
         <DiaryList moodDiaries={this.props.moodDiaries}/>
       </div>
