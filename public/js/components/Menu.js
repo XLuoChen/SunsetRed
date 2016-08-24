@@ -9,8 +9,8 @@ export default class Menu extends Component {
           <Link to='/traveller' className="navbar-brand menuSize">最新专栏</Link>
           <Link to='/traveller' className="navbar-brand menuSize"> 最热专栏</Link>
           <Link to='/traveller' className="navbar-brand menuSize"> 热门话题</Link>
-          <Link to='/traveller' className="navbar-brand publishArticle"><span
-            className="glyphicon glyphicon-pencil menuSize">发表</span></Link>
+          <Link to='/traveller' className="navbar-brand publishArticle menuSize"><span
+            className="glyphicon glyphicon-pencil">发表</span></Link>
         </ul>
       </nav>
     </div>
