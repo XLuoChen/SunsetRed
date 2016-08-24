@@ -20,6 +20,14 @@ div {
   width: 100%;
 }
 
+#myCarousel img {
+  height: 600px;
+  width: 1450px;
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 #navbar img {
   width: 60px;;
 }
@@ -46,7 +54,7 @@ div {
   max-width: 100%;
 }
 
-#parentOfImg{
+#parentOfImg {
   height: 160px;
   width: auto;
 }
