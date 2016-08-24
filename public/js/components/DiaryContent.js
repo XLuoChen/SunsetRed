@@ -1,13 +1,20 @@
-import React,{Component} from 'react';
+import React, {Component} from "react";
 
-export default class DiaryContent extends Component{
+export default class DiaryContent extends Component {
   componentDidMount() {
-    const index=this.props.params.index;
+    const index = this.props.params.index;
     this.props.getDiaryContent(index);
   }
-  render(){
-    return <div>
-      {this.props.diaryContent.name}
+
+  render() {
+    return <div className="col-md-6 col-md-offset-3">
+      <div className="panel panel-primary ">
+        <div className="panel-heading">
+         <center> <h1 className="panel-title ">日记主题：{this.props.diaryContent.title}&nbsp;&nbsp;&nbsp;&nbsp;<small>昵称：{this.props.diaryContent.name}</small></h1></center>
+        </div>
+        <div className="panel-body" style={{'minHeight':'450px'}}>&nbsp;&nbsp;&nbsp;日记内容:{this.props.diaryContent.content}</div>
+        <div className="panel-footer text-right">类型：{this.props.diaryContent.sort}&nbsp;&nbsp;&nbsp;</div>
+      </div>
     </div>
   }
 }
