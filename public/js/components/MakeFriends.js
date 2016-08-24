@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import FriendList from '../containers/FriendList'
 import {store} from '../main';
 
@@ -52,6 +53,15 @@ class Tabs extends Component {
             <option>天津</option>
             <option>河北</option>
             <option>山西</option>
+          </select>
+        </label>
+        <label>兴趣
+          <select id="province">
+            <option selected>请选择</option>
+            <option>下棋</option>
+            <option>打太极</option>
+            <option>跳舞</option>
+            <option>看报</option>
           </select>
         </label>
         <label>

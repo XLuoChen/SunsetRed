@@ -1,8 +1,7 @@
 module.exports = (state = {articles: []}, action) => {
 
   switch (action.type) {
-
-    case 'GET_ARTICLES': {
+    case 'ARTICLE_LIST': {
       return {articles: action.articles};
     }
   }

@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 
 export default class MoodDiary extends Component {
-  componentDidMount(){
+  componentDidMount() {
     this.props.getDaries();
   }
+
   render() {
     return <div className="row">
       <div className="col-md-6 col-md-offset-3">
@@ -19,8 +20,8 @@ export default class MoodDiary extends Component {
 class DiaryList extends Component {
   render() {
     return <div className="list-group">
-      {this.props.moodDiaries.map((moodDiary,index)=> {
-        return <a href="#" className="list-group-item row">
+      {this.props.moodDiaries.map((moodDiary, index)=> {
+        return <a href="#" className="list-group-item row" key={index}>
           <div className="col-md-6">
             <h4 className="list-group-item-heading">昵称：{moodDiary.name}<br/><br/>日记主题：{moodDiary.title}</h4>
           </div>

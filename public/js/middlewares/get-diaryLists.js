@@ -1,4 +1,5 @@
-import {request} from 'superagent';
+import request from "superagent";
+
 export default store => next => action => {
   if (action.type === 'SET_DIARIES') {
     request.get('/moodDiaries')
