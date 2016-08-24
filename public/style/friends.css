@@ -56,3 +56,9 @@
   width:210px;
   height:300px;
 }
+
+.search_box { height:40px; font:14px/40px "宋体"; margin-top:8px; background:#e2f3fa;}
+.search_box form { _margin-top:10px;}
+.search_box label { margin:0 5px;}
+.search_box .searchFriend { display:inline-block; width:70px; height:40px;background:#21648f ; color:#fff; border:none; border-radius:3px;}
+.search_box .searchFriend:hover { background:#f60; color:#fff; border:none; border-radius:3px;}
