@@ -6,14 +6,14 @@ export default store => next => action => {
       .end((err, res) => {
         next({type: action.type, value: res.body})
       });
-  }else if(action.type === "SEARCH"){
+  } else if (action.type === "SEARCH") {
     request.post('/friends')
-      .send({condition:action.condition})
+      .send({condition: action.condition})
       .end((err, res) => {
         next({type: "SET_FRIENDS", value: res.body})
       });
   }
-  else{
+  else {
     next(action);
   }
 };

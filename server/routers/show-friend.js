@@ -16,7 +16,7 @@ router.get('/friends', (req, res)=> {
 });
 
 router.post('/friends', (req, res)=> {
-  find.findFriend(req.body.condition.sex,(result) => {
+  find.findFriend(req.body.condition,(result) => {
     res.json(result);
   });
 
