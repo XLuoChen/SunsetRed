@@ -31,3 +31,32 @@ div {
 .publishArticle {
   margin-left: 300px;
 }
+
+.articleList {
+  border: dashed 1px darkgrey;
+  margin-top: 30px;
+}
+
+.sameLine {
+  display: inline;
+}
+
+#picture {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#parentOfImg{
+  height: 160px;
+  width: auto;
+}
+
+#articleFooter {
+  margin-top: 15%;
+  color: darkgrey;
+
+}
+
+#articleFooter a {
+  color: #ff9d00;
+}

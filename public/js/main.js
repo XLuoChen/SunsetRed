@@ -4,16 +4,19 @@ import {createStore, applyMiddleware} from "redux";
 import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, hashHistory} from "react-router";
 import App from "./containers/App";
-import HomePage from "./components/HomePage";
+
 import MakeFriends from "./containers/MakeFriends";
-import getFriendsInformation from "./middlewares/get-friend-information";
-import reducer from "./reducers/index";
 import HappinessShare from "./containers/HappinessShare";
-import setHappiness from "./middlewares/set-happiness";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from "./containers/Traveller";
+import HomePage from "./components/HomePage";
+import getFriendsInformation from "./middlewares/get-friend-information";
+import setHappiness from "./middlewares/set-happiness";
+import getArticleList from './middlewares/get-articleList'
 import MooddDiarylists from "./middlewares/get-diaryLists";
-const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness, MooddDiarylists)(createStore);
+import reducer from "./reducers/index";
+
+const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness,getArticleList,MooddDiarylists)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
