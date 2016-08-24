@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+
 import FriendList from '../containers/FriendList'
 import {store} from '../main';
 
@@ -7,8 +8,8 @@ export default class MakeFriends extends Component {
     store.dispatch({type: 'SET_FRIENDS'});
   }
 
-   onSearch(condition){
-     store.dispatch({type:"SEARCH", condition});
+  onSearch(condition) {
+    store.dispatch({type: "SEARCH", condition});
   }
 
   render() {
@@ -19,39 +20,58 @@ export default class MakeFriends extends Component {
   }
 }
 class Tabs extends Component {
-  search(){
-    const searchCondition = {
-      sex:this.refs.sex.value,
-      age:this.refs.age.value
-    };
+  search() {
+    let searchCondition = {};
+    if (this.refs.sex.value != '') {
+      searchCondition.sex = this.refs.sex.value;
+    }
+    if (this.refs.age.value != '') {
+      searchCondition.age = this.refs.age.value;
+    }
+    if (this.refs.city.value != '') {
+      searchCondition.city = this.refs.city.value;
+    }
+    if (this.refs.hobby.value != '') {
+      searchCondition.hobby = this.refs.hobby.value;
+    }
     this.props.onSearch(searchCondition);
   }
+
   render() {
     return <div className="search_box">
       <form>
         <label>性别：
           <select ref="sex">
-            <option selected>不限</option>
-            <option >男</option>
-            <option >女</option>
+            <option value="">不限</option>
+            <option value="男">男</option>
+            <option value="女">女</option>
           </select>
         </label>
         <label>年龄：
           <select ref="age">
-            <option selected>不限</option>
-            <option>50-55</option>
-            <option>55-60</option>
-            <option>60-65</option>
-            <option>65-70</option>
+            <option value="">不限</option>
+            <option value="50-55">50-55</option>
+            <option value="55-60">55-60</option>
+            <option value="60-65">60-65</option>
+            <option value="65-70">65-70</option>
           </select>
         </label>
         <label>城市
-          <select id="province">
-            <option selected>请选择</option>
-            <option>北京</option>
-            <option>天津</option>
-            <option>河北</option>
-            <option>山西</option>
+          <select ref="city">
+            <option value="">请选择</option>
+            <option value="北京">北京</option>
+            <option value="西安">西安</option>
+            <option value="河北">河北</option>
+            <option value="山西">山西</option>
+          </select>
+        </label>
+        <label>兴趣
+          <select ref="hobby">
+            <option value="">请选择</option>
+            <option value="下棋">下棋</option>
+            <option value="打太极">打太极</option>
+            <option value="跳舞">跳舞</option>
+            <option value="看报">看报</option>
           </select>
         </label>
         <label>

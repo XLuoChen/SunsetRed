@@ -10,10 +10,10 @@ function findData(callback) {
   });
 }
 
-function findFriend(sex,callback) {
+function findFriend(condition,callback) {
   MongoClient.connect(url, function (err, db) {
     const collection = db.collection('friends');
-    collection.find({sex:sex},{_id:0}).toArray(function (err, result) {
+    collection.find(condition,{_id:0}).toArray(function (err, result) {
       callback(result);
     });
   });

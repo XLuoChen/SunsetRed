@@ -4,6 +4,7 @@ import {createStore, applyMiddleware} from "redux";
 import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, hashHistory} from "react-router";
 import App from "./containers/App";
+
 import MakeFriends from "./containers/MakeFriends";
 import HappinessShare from "./containers/HappinessShare";
 import MoodDiaries from "./containers/MoodDiaries";
