@@ -6,7 +6,7 @@ export default class FriendList extends Component {
       {this.props.friends.map((ele, index)=> {
         return <div key={index} className="box">
           <a>
-            <img className="friendImg" src={"../../images/friends-pictures/" + ele.imgName}/>
+            <img className="friendImg" src={`../../images/friends-pictures/${ele.imgName}`}/>
             <span className="www-A1">
               {ele.name}<br/>{ele.sex}<br/>{ele.city}<br/>{ele.hobby}
               <br/>
