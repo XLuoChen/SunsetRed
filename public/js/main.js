@@ -10,7 +10,7 @@ import HappinessShare from "./containers/HappinessShare";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from "./containers/Traveller";
 import HomePage from "./components/HomePage";
-import getFriendsInformation from "./middlewares/get-friend-information";
+import getFriendsInformation from "./middlewares/get-friend";
 import setHappiness from "./middlewares/set-happiness";
 import getArticleList from './middlewares/get-articleList'
 import MooddDiarylists from "./middlewares/get-diaryLists";

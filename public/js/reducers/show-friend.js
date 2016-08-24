@@ -1,8 +1,8 @@
-function reducer(state = {value: []}, action) {
+function reducer(state = {friends: []}, action) {
   switch (action.type) {
     case "SET_FRIENDS":
       return {
-        value: action.value
+        friends: action.friends
       };
   }
   return state;

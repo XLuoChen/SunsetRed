@@ -1,9 +1,9 @@
 import FriendList from '../components/FriendList';
 import {connect} from 'react-redux';
 
-const mapStateToProps =(state)=>{
-  return{
-    value:state.showFriends.value
+const mapStateToProps = (state)=> {
+  return {
+    friends: state.Friends.friends
   }
 };
 
