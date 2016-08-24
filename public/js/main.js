@@ -13,7 +13,9 @@ import setHappiness from "./middlewares/set-happiness";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from "./containers/Traveller";
 import MooddDiarylists from "./middlewares/get-diaryLists";
-const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness, MooddDiarylists)(createStore);
+import DiaryContent from './containers/DiaryContent';
+import geDiaryContent from './middlewares/get-diaryContent'
+const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness, MooddDiarylists,geDiaryContent)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
@@ -24,7 +26,10 @@ render(
         <IndexRoute component={HomePage}/>
         <Route path="/friends" component={MakeFriends}/>
         <Route path="/happiness" component={HappinessShare}/>
-        <Route path='/moodDiary' component={MoodDiaries}/>
+        <Route path='/moodDiary'>
+          <IndexRoute component={MoodDiaries}/>
+          <Route path="/moodDiary/:index" component={DiaryContent}/>
+        </Route>
         <Route path="/traveller" component={Traveller}/>
       </Route>
     </Router>
