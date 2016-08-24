@@ -31,3 +31,31 @@ div {
 .publishArticle {
   margin-left: 300px;
 }
+
+.articleList {
+  border: dashed 1px darkgrey;
+  margin-top: 30px;
+}
+
+.sameLine {
+  display: inline;
+}
+
+#picture {
+  height: 100%;
+  width: 100%;
+}
+
+#article h1 {
+  color: b;
+}
+
+#articleFooter {
+  margin-top: 15%;
+  color: darkgrey;
+
+}
+
+#articleFooter a {
+  color: #ff9d00;
+}
