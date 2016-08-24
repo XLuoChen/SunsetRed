@@ -1,20 +1,18 @@
 import React, {Component} from 'react';
-
 import FriendList from '../containers/FriendList'
-import {store} from '../main';
 
 export default class MakeFriends extends Component {
   componentDidMount() {
-    store.dispatch({type: 'SET_FRIENDS'});
+    this.props.onFindFriends();
   }
 
-  onSearch(condition) {
-    store.dispatch({type: "SEARCH", condition});
+  search(condition) {
+    this.props.onSearch(condition);
   }
 
   render() {
     return <div className="friendWhole">
-      <Tabs onSearch={this.onSearch.bind(this)}/>
+      <Tabs search={this.search.bind(this)}/>
       <FriendList/>
     </div>
   }
@@ -34,7 +32,7 @@ class Tabs extends Component {
     if (this.refs.hobby.value != '') {
       searchCondition.hobby = this.refs.hobby.value;
     }
-    this.props.onSearch(searchCondition);
+    this.props.search(searchCondition);
   }
 
   render() {
