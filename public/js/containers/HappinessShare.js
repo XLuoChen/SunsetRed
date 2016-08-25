@@ -7,4 +7,12 @@ const mapStateToProps = (state)=> {
   };
 };
 
-export default connect(mapStateToProps)(HappinessShare);
+const mapDispatchToProps = (dispatch)=> {
+  return {
+    getFilterHappiness: () => {
+      dispatch({type: 'SET_HAPPINESS'});
+    }
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HappinessShare);
