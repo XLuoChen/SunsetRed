@@ -3,7 +3,8 @@ module.exports = {
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
@@ -17,7 +18,8 @@ module.exports = {
     "React": true
   },
   "plugins": [
-    "react"
+    "react",
+    "mocha"
   ],
   "rules": {
     "prefer-arrow-callback": "error",
@@ -35,6 +37,7 @@ module.exports = {
       "unix"
     ],
     "no-console": 0,
+    "no-unused-vars": ["error", {"args": "none"}],
     "semi": [
       "error",
       "always"
