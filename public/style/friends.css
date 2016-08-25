@@ -1,58 +1,45 @@
-.findFriendConditon{
+.findFriendConditon {
   cursor: pointer;
 }
 
-.box {
-  margin: 0;
-  overflow: hidden;
-  float: left;
-  position: relative;
+.friendWhole {
+  text-align: center;
 }
 
-.box a {
-  text-decoration: none;
-  float: left;
+.raw {
+  display: table;
+  width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search_box {
+  height: 40px;
+  font: 14px/40px "宋体";
+  margin-top: 8px;
+  background: #e2f3fa;
 }
 
-.box a:hover {
-  cursor: pointer;
+.search_box form {
+  _margin-top: 10px;
 }
 
-.box a img {
-  float: left;
-  margin: 0;
-  border: none;
-  padding: 10px;
-  background: #fff;
-  border: 1px solid #ddd;
+.search_box label {
+  margin: 0 5px;
 }
 
-.box a:hover .www-A1 {
-  display: block;
-  font-size: 12px;
-  padding: 10px 0px;
-  background: #111;
-  filter: alpha(opacity=75);
-  opacity: .75;
+.search_box .searchFriend {
+  display: inline-block;
+  width: 70px;
+  height: 40px;
+  background: #21648f;
   color: #fff;
-  position: absolute;
-  padding: 10px;
-  margin: 11px 11px 11px 11px;
-  width: 190px;
-  height: 280px;
-  border-top: 1px solid #999;
+  border: none;
+  border-radius: 3px;
 }
 
-.box a:hover .www-A1 {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 14px;
-}
-
-.box a .www-A1 {
-  display: none;
-}
-.friendImg{
-  width:210px;
-  height:300px;
+.search_box .searchFriend:hover {
+  background: #f60;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
 }

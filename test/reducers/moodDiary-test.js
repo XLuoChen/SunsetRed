@@ -1,8 +1,8 @@
 const reducer = require('../../public/js/reducers/moodDiary');
 const expect = require('chai').expect;
 
-describe('moodDiary', function () {
-  it('can change MoodDiaries', function () {
+describe('moodDiary', () =>{
+  it('can change MoodDiaries', () => {
     const state = {moodDiaries: []};
     const action = {
       type: "SET_DIARIES",

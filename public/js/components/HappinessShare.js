@@ -1,14 +1,13 @@
 import React, {Component} from "react";
 import {Link} from 'react-router';
-import {store} from '../main';
 
 export default class HappinessShare extends Component {
   componentDidMount() {
-    store.dispatch({type: 'SET_HAPPINESS'});
+    this.props.getFilterHappiness();
   }
 
   setFilterHappiness() {
-    store.dispatch({type: 'SET_HAPPINESS'});
+    this.props.getFilterHappiness();
   }
 
   render() {
@@ -28,7 +27,7 @@ export default class HappinessShare extends Component {
           </button>
         </div>
       </div>
-    </div>
+    </div>;
   }
 }
 
@@ -37,11 +36,11 @@ class HappinessList extends Component {
     const happinessList = this.props.filterHappiness.map((item, index) => {
       return <div key={index}>
         <PersonShow happinessItem={item}/>
-      </div>
+      </div>;
     });
     return <div>
       {happinessList}
-    </div>
+    </div>;
   }
 }
 
@@ -50,10 +49,12 @@ class PersonShow extends Component {
     return <div className="happiness">
       <img src={this.props.happinessItem.image}
            alt={this.props.happinessItem.name}/>
-      <div className="happinessTag">{this.props.happinessItem.name}</div>
+      <div className="happinessTag">
+        {this.props.happinessItem.name}
+      </div>
       <div className="personShow">
         {this.props.happinessItem.text}
       </div>
-    </div>
+    </div>;
   }
 }

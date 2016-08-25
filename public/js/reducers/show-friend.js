@@ -1,9 +1,11 @@
-function reducer(state = {value: []}, action) {
+function reducer(state = {friends: [],promptMessage:''}, action) {
   switch (action.type) {
     case "SET_FRIENDS":
       return {
-        value: action.value
+        friends: action.friends
       };
+    case "PROMPT_MESSAGE":
+      return {friends:action.friends,promptMessage:action.promptMessage};
   }
   return state;
 }

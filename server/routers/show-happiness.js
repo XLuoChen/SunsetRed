@@ -1,4 +1,4 @@
-const findData = require('../dbs/show-happiness');
+const findData = require('../dbs/find-happiness');
 const express = require('express');
 const router = express.Router();
 

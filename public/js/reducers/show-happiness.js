@@ -3,7 +3,7 @@ function reducer(state = {filterHappiness: []}, action) {
     case "SET_HAPPINESS":
       return {
         filterHappiness: [...action.data]
-      }
+      };
   }
   return state;
 }

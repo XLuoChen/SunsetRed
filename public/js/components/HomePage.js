@@ -3,10 +3,28 @@ import React, {Component} from 'react';
 export default class HomePage extends Component {
 
   render() {
-
-    return <div>
-      <img src="../../images/background.jpg" alt="gd" id="homeImg"/>
-    </div>
+    return <div id="myCarousel" className="carousel slide">
+      <ol className="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div className="carousel-inner">
+        <div className="item active">
+          <img src="../../images/home/slider1.png" alt="First slide"/>
+        </div>
+        <div className="item">
+          <img src="../../images/home/slider2.png" alt="Second slide"/>
+        </div>
+        <div className="item">
+          <img src="../../images/home/slider3.png" alt="Second slide"/>
+        </div>
+      </div>
+      <a className="carousel-control left" href="#myCarousel"
+         data-slide="prev">&lsaquo;</a>
+      <a className="carousel-control right" href="#myCarousel"
+         data-slide="next">&rsaquo;</a>
+    </div>;
   }
 }
 

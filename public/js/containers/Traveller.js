@@ -7,6 +7,6 @@ export default class Traveller extends Component {
     return <div>
       <Menu/>
       <ArticleList/>
-    </div>
+    </div>;
   }
 }
