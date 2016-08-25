@@ -5,7 +5,7 @@ const mapStateToProps = (state)=> {
   return {
     friends: state.Friends.friends,
     promptMessage: state.Friends.promptMessage
-  }
+  };
 };
 
 export default connect(mapStateToProps)(FriendList);

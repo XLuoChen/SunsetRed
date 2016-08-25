@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch)=> {
     onSearch: (conditon)=> {
       dispatch({type: "SEARCH", condition: conditon});
     }
-  }
+  };
 };
 
-export default connect(()=> {return {}}, mapDispatchToProps)(MakeFriends);
+export default connect(()=> {return {};}, mapDispatchToProps)(MakeFriends);
