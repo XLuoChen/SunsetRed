@@ -9,10 +9,9 @@ export default class FriendList extends Component {
             <img className="friendImg" src={`../../images/friends-pictures/${ele.imgName}`}/>
             <span className="www-A1">
               {ele.name}<br/>{ele.sex}<br/>{ele.city}<br/>{ele.hobby}
-              <br/>
-            <button className="follow">关注</button>
             </span>
-          </a>
+          </a><br/>
+          <button className="btn btn-primary">关注</button>
         </div>
       })}
     </div>
