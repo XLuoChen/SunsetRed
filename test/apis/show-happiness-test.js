@@ -12,7 +12,7 @@ describe('server', () => {
     likedCount: 20
   }];
 
-  beforeEach(function (done) {
+  beforeEach((done) => {
     mongoClient.connect(url, (err, db)=> {
       const collection = db.collection('happinessCol');
       collection.removeMany({}, () => {
@@ -26,7 +26,7 @@ describe('server', () => {
     server = require('../../server');
   });
 
-  it('responds to /happiness', function testSlash(done) {
+  it('responds to /happiness', (done) => {
     request(server)
       .get('/happiness')
       .expect(200, '[{"name":"Jake","image":"../../images/happiness-pictures/a.jpg","text":"晒幸福","likedCount":20}]', done);
