@@ -1,10 +1,11 @@
-const findData = require('../dbs/moodDiary');
+const findData = require('../dbs/diaryContent');
 const express = require('express');
 const router = express.Router();
 
-router.post('/diaryContent', (req, res)=> {
-  findData((result) => {
-    res.json(result[req.body.index]);
+router.post('/diary', (req, res)=> {
+  findData(req.body, (result) => {
+    console.log(result);
+    res.json(result);
   });
 });
 

@@ -3,14 +3,14 @@ import DiaryContent from "../components/DiaryContent";
 
 const mapDispatchToProps = (dispatch)=> {
   return {
-    getDiaryContent: (index)=> {
-      dispatch({type: "GETCONTENT", index});
+    getDiaryContent: (userId)=> {
+      dispatch({type: "GET_CONTENT", userId})
     }
-  };
+  }
 };
 const mapStateToProps = (state)=> {
   return {
-    diaryContent: state.diaryContent.diaryContent
-  };
+    diaryContent: state.moodDiaries.diaryContent
+  }
 };
 export default connect(mapStateToProps, mapDispatchToProps)(DiaryContent);

@@ -7,7 +7,7 @@ describe('traveller', () => {
   let defaultArticles;
   beforeEach((done) => {
     mongoClient.connect(url, (err, db) => {
-      const collection = db.collection('traveller');
+      const collection = db.collection('travellersCol');
       defaultArticles = {
         articles: [{
           title: "首尔作家开的咖啡馆",

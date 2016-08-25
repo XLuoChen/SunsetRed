@@ -7,7 +7,7 @@ describe('server', () => {
 
   const defaultHappiness = [{
     name: "Jake",
-    image: "a.jpg",
+    image: "00000001.jpg",
     text: "晒幸福",
     likedCount: 20
   }];

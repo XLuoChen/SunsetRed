@@ -1,10 +1,17 @@
-function reducer(state = {moodDiaries:[]}, action) {
-  switch(action.type){
+function reducer(state = {moodDiaries: [], diaryContent: {}}, action) {
+
+  switch (action.type) {
     case "SET_DIARIES":
-      return {
-        moodDiaries : action.moodDiaries
-      };
+
+      return Object.assign({}, state, {
+        moodDiaries: action.moodDiaries
+      });
+    case "SET_CONTENT":
+      return Object.assign({}, state, {
+        diaryContent: action.diaryContent
+      });
   }
+
   return state;
 }
 

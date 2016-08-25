@@ -5,11 +5,11 @@ const mongoClient = require('../../server/helpers/mongodb');
 describe('server', () => {
   let server;
 
-  beforeEach( (done)=> {
+  beforeEach((done)=> {
     mongoClient.connect(url, (err, db)=> {
       const collection = db.collection('diarycol');
       collection.removeMany({}, () => {
-        collection.insert([{name: "baiying", title: "我的心情", content: "我很好", sort: "情感天地"}], (err, result)=> {
+        collection.insertOne([{name: "baiying", title: "我的心情", content: "我很好", sort: "情感天地"}], (err, result)=> {
           db.close();
           done();
         });
