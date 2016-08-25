@@ -38,7 +38,7 @@ class Diary extends Component {
       <div className="row">
         <div className="col-md-6">
           <h4 className="list-group-item-heading">昵称：{this.props.moodDiary.name}<br/><br/><Link
-            to={`/moodDiary/${this.props.index}`}>日记主题：{this.props.moodDiary.title}</Link></h4>
+            to={`/moodDiaries/${this.props.moodDiary.userId}`}>日记主题：{this.props.moodDiary.title}</Link></h4>
         </div>
         <div className="col-md-4 col-md-offset-2">
           <p className="list-group-item-text"> 类型：{this.props.moodDiary.sort} <br/><br/>日期：****</p>

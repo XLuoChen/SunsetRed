@@ -3,8 +3,8 @@ import DiaryContent from "../components/DiaryContent";
 
 const mapDispatchToProps = (dispatch)=> {
   return {
-    getDiaryContent: (index)=> {
-       dispatch({type:"GET_CONTENT",index})
+    getDiaryContent: (userId)=> {
+       dispatch({type:"GET_CONTENT",userId})
     }
   }
 };

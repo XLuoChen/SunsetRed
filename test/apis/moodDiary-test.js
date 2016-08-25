@@ -5,7 +5,7 @@ const mongoClient = require('../../server/helpers/mongodb');
 describe('server', () => {
   let server;
 
-  beforeEach( (done)=> {
+  beforeEach((done)=> {
     mongoClient.connect(url, (err, db)=> {
       const collection = db.collection('diarycol');
       collection.removeMany({}, () => {

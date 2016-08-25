@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/diaryContent', (req, res)=> {
-  findData((result) => {
-    res.json(result[req.body.index]);
+  findData({userId:req.body.userId},(result) => {
+    res.json(result);
   });
 });
 

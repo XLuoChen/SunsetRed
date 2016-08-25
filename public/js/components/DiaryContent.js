@@ -2,8 +2,8 @@ import React, {Component} from "react";
 
 export default class DiaryContent extends Component {
   componentDidMount() {
-    const index = this.props.params.index;
-    this.props.getDiaryContent(index);
+    const userId = this.props.params.userId;
+    this.props.getDiaryContent(userId);
   }
 
   render() {

@@ -34,7 +34,7 @@ render(
         <Route path="/happiness" component={HappinessShare}/>
         <Route path='/moodDiary'>
           <IndexRoute component={MoodDiaries}/>
-          <Route path="/moodDiary/:index" component={DiaryContent}/>
+          <Route path="/moodDiaries/:userId" component={DiaryContent}/>
         </Route>
         <Route path="/writeDiaryPage" component={WriteDiaryPage}/>
         <Route path="/traveller" component={Traveller}/>
