@@ -20,6 +20,14 @@ div {
   width: 100%;
 }
 
+#myCarousel img {
+  height: 600px;
+  width: 1450px;
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 #navbar img {
   width: 60px;;
 }
@@ -30,4 +38,33 @@ div {
 
 .publishArticle {
   margin-left: 300px;
+}
+
+.articleList {
+  border: dashed 1px darkgrey;
+  margin-top: 30px;
+}
+
+.sameLine {
+  display: inline;
+}
+
+#picture {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#parentOfImg {
+  height: 160px;
+  width: auto;
+}
+
+#articleFooter {
+  margin-top: 15%;
+  color: darkgrey;
+
+}
+
+#articleFooter a {
+  color: #ff9d00;
 }

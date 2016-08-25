@@ -4,19 +4,24 @@ import {createStore, applyMiddleware} from "redux";
 import {Provider} from "react-redux";
 import {Router, Route, IndexRoute, hashHistory} from "react-router";
 import App from "./containers/App";
-import HomePage from "./components/HomePage";
+
 import MakeFriends from "./containers/MakeFriends";
-import getFriendsInformation from "./middlewares/get-friend-information";
-import reducer from "./reducers/index";
 import HappinessShare from "./containers/HappinessShare";
-import setHappiness from "./middlewares/set-happiness";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from "./containers/Traveller";
+import HomePage from "./components/HomePage";
+import getFriendsInformation from "./middlewares/get-friend";
+import setHappiness from "./middlewares/set-happiness";
+import getArticleList from './middlewares/get-articleList'
 import MooddDiarylists from "./middlewares/get-diaryLists";
+
 import DiaryContent from './containers/DiaryContent';
 import geDiaryContent from './middlewares/get-diaryContent';
 import WriteDiaryPage from './containers/WriteDiaryPage';
-const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness, MooddDiarylists,geDiaryContent)(createStore);
+const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness, MooddDiarylists,geDiaryContent,getArticleList)(createStore);
+import reducer from "./reducers/index";
+
+
 
 const store = createStoreWithMiddleware(reducer);
 
@@ -37,5 +42,3 @@ render(
     </Router>
   </Provider>
   , document.getElementById('app'));
-
-export {store}

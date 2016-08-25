@@ -10,4 +10,13 @@ function findData(callback) {
   });
 }
 
-module.exports = findData;
+function findFriend(condition,callback) {
+  MongoClient.connect(url, function (err, db) {
+    const collection = db.collection('friends');
+    collection.find(condition,{_id:0}).toArray(function (err, result) {
+      callback(result);
+    });
+  });
+}
+
+module.exports = {findData,findFriend};

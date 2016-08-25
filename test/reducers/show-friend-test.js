@@ -3,9 +3,9 @@ const expect = require('chai').expect;
 
 describe('friend', function () {
   it('can show',function () {
-    const state = {value: ''};
-    const action={type:"SET_FRIENDS",value:{name:"gaole",sex:"女",city:"西安"}};
-    expect(reducer(state,action)).to.be.deep.equal({value:{name:"gaole",sex:"女",city:"西安"}});
+    const state = {friends: ''};
+    const action={type:"SET_FRIENDS",friends:{name:"gaole",sex:"女",city:"西安"}};
+    expect(reducer(state,action)).to.be.deep.equal({friends:{name:"gaole",sex:"女",city:"西安"}});
   })
 });
 
