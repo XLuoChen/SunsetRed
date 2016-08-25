@@ -23,10 +23,10 @@ export default class ArticleList extends Component {
               className="glyphicon glyphicon-comment">{article.commentCount}</span></div>
           </div>
         </div>
-      </div>
+      </div>;
     });
     return <div>
       {articles}
-    </div>
+    </div>;
   };
 }
