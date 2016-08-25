@@ -36,7 +36,7 @@ export default class WriteDiaryPage extends Component {
         </div>
         <div className="form-group">
           <div className="col-sm-offset-3 col-sm-6">
-            <button type="submit" className="btn btn-primary" style={{width:'450px'}}>submit</button>
+            <button type="submit" className="btn btn-primary" style={{width: '450px'}}>submit</button>
           </div>
         </div>
       </form>

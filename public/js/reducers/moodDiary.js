@@ -1,9 +1,9 @@
-function reducer(state = {moodDiaries:[]}, action) {
-  switch(action.type){
+function reducer(state = {moodDiaries: []}, action) {
+  switch (action.type) {
     case "SET_DIARIES":
 
       return {
-        moodDiaries : action.moodDiaries
+        moodDiaries: action.moodDiaries
       };
   }
 
