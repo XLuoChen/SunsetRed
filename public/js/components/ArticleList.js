@@ -28,5 +28,5 @@ export default class ArticleList extends Component {
     return <div>
       {articles}
     </div>;
-  };
+  }
 }

@@ -19,8 +19,9 @@ import MooddDiarylists from "./middlewares/get-diaryLists";
 import DiaryContent from './containers/DiaryContent';
 import geDiaryContent from './middlewares/get-diaryContent';
 import WriteDiaryPage from './containers/WriteDiaryPage';
+import getFollowFriends from './middlewares/get-followFriends';
 
-const createStoreWithMiddleware = applyMiddleware(getFriendsInformation, getHappiness,addHappiness,MooddDiarylists, geDiaryContent, getArticleList)(createStore);
+const createStoreWithMiddleware = applyMiddleware(getFriendsInformation, getHappiness, addHappiness, MooddDiarylists, geDiaryContent, getArticleList, getFollowFriends)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 

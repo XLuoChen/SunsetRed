@@ -19,6 +19,6 @@ export default class HappinessPublish extends Component {
         <button type="submit" className="btn btn-success" onClick={this.onHappinessSubmit.bind(this)}>提交</button>
         <button className="btn btn-warning">取消</button>
       </Link>
-    </div>
+    </div>;
   }
 }

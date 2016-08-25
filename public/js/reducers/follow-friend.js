@@ -1,6 +1,6 @@
 function reducer(state = {following: []}, action) {
   switch (action.type) {
-    case "FOLLOW_FRIENDS":
+    case "SET_FOLLOW_FRIENDS":
       return {
         following: action.following
       };

@@ -2,10 +2,11 @@ const url = require('../helpers/get-url');
 const MongoClient = require('../helpers/mongodb');
 
 function addData(req, callback) {
-  MongoClient.connect(url, function (err, db) {
+  MongoClient.connect(url, (err, db) => {
     const collection = db.collection('happinessCol');
     let happiness;
-    collection.find({}, {_id: 0}).toArray(function (err, result) {
+
+    collection.find({}, {_id: 0}).toArray((err, result) => {
       let imageNumber = '00000001';
       const imageNameLength = '00000000';
 
@@ -21,11 +22,13 @@ function addData(req, callback) {
         text: req.body.text,
         likedCount: "0"
       };
-      collection.insert(happiness, function (err, result) {
+
+      collection.insert(happiness, (err) => {
         if (err) {
           console.log("Error" + err);
         }
       });
+
       callback(imageNumber);
     });
   });

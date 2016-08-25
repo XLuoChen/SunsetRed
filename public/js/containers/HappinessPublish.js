@@ -7,9 +7,9 @@ const mapDispatchToProps = (dispatch)=> {
     onAdd: (name, text, imageType)=> {
       dispatch({type: 'ADD_HAPPINESS', name, text, imageType});
     }
-  }
+  };
 };
 
 export default connect(()=> {
-  return {}
+  return {};
 }, mapDispatchToProps)(HappinessPublish);

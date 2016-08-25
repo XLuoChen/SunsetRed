@@ -13,6 +13,9 @@ module.exports = {
     },
     "sourceType": "module"
   },
+  "globals": {
+    "React": true
+  },
   "plugins": [
     "react"
   ],
@@ -40,7 +43,8 @@ module.exports = {
       "error",
       15
     ],
-    "react/jsx-uses-vars": [2],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "max-lines": [
       "error",
       {
