@@ -19,11 +19,11 @@ app.use('/', moodDiaries);
 app.use('/', traveller);
 app.use('/', diaryContent);
 
-app.get('*', function (request, response) {
+app.get('*', (request, response) => {
   response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 
-var server = app.listen(5000, function () {
+var server = app.listen(5000, () => {
   console.log('listening at port %s', server.address().port);
 });
 

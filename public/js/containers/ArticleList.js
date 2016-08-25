@@ -1,4 +1,3 @@
-import React, {Component} from "react";
 import {connect} from "react-redux";
 import ArticleList from "../components/ArticleList";
 
@@ -12,7 +11,7 @@ const mapDispatchToProps = (dispatch) => {
       dispatch({type: 'GET_ARTICLES'});
     }
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArticleList);
 

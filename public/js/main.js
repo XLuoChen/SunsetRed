@@ -12,16 +12,13 @@ import Traveller from "./containers/Traveller";
 import HomePage from "./components/HomePage";
 import getFriendsInformation from "./middlewares/get-friend";
 import getHappiness from "./middlewares/get-happiness";
-import getArticleList from './middlewares/get-articleList'
+import getArticleList from './middlewares/get-articleList';
 import MooddDiarylists from "./middlewares/get-diaryLists";
-
 import DiaryContent from './containers/DiaryContent';
 import geDiaryContent from './middlewares/get-diaryContent';
 import WriteDiaryPage from './containers/WriteDiaryPage';
-const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,getHappiness, MooddDiarylists,geDiaryContent,getArticleList)(createStore);
+const createStoreWithMiddleware = applyMiddleware(getFriendsInformation, getHappiness, MooddDiarylists, geDiaryContent, getArticleList)(createStore);
 import reducer from "./reducers/index";
-
-
 
 const store = createStoreWithMiddleware(reducer);
 
