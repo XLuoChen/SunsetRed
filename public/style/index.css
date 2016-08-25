@@ -72,3 +72,11 @@ div {
 .pointer {
   cursor: pointer;
 }
+
+.buttonInterval {
+  margin-right: 40px;
+}
+
+#publishButton {
+  margin-top: 30px;
+}
