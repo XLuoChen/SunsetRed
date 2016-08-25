@@ -23,6 +23,6 @@ export default class NavigatorBar extends Component {
           <li><Link to="/"><span className="glyphicon glyphicon-log-in">登录</span> </Link></li>
         </ul>
       </nav>
-    </div>
+    </div>;
   }
 }

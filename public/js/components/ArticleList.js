@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {store} from '../main';
 
 export default class ArticleList extends Component {
   componentDidMount() {
@@ -29,5 +28,5 @@ export default class ArticleList extends Component {
     return <div>
       {articles}
     </div>
-  }
+  };
 }

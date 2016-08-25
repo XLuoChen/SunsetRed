@@ -12,7 +12,7 @@ import Traveller from "./containers/Traveller";
 import HomePage from "./components/HomePage";
 import getFriendsInformation from "./middlewares/get-friend";
 import setHappiness from "./middlewares/set-happiness";
-import getArticleList from './middlewares/get-articleList'
+import getArticleList from './middlewares/get-articleList';
 import MooddDiarylists from "./middlewares/get-diaryLists";
 
 import DiaryContent from './containers/DiaryContent';
