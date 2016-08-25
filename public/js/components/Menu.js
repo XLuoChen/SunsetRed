@@ -6,10 +6,11 @@ export default class Menu extends Component {
     return <div className="col-lg-offset-2">
       <nav className="navbar">
         <ul className="nav navbar-nav navbar-left">
-          <Link to='/' className="navbar-brand menuSize">最新专栏</Link>
-          <Link to='/' className="navbar-brand menuSize"> 最热专栏</Link>
-          <Link to='/' className="navbar-brand menuSize"> 热门话题</Link>
-          <Link to='/' className="navbar-brand publishArticle"> 发表</Link>
+          <Link to='/traveller' className="navbar-brand menuSize">最新专栏</Link>
+          <Link to='/traveller' className="navbar-brand menuSize"> 最热专栏</Link>
+          <Link to='/traveller' className="navbar-brand menuSize"> 热门话题</Link>
+          <Link to='/traveller' className="navbar-brand publishArticle menuSize"><span
+            className="glyphicon glyphicon-pencil">发表</span></Link>
         </ul>
       </nav>
     </div>

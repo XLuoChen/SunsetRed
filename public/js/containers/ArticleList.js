@@ -6,5 +6,13 @@ const mapStateToProps = (state)=> {
   return {articles: state.traveller.articles};
 };
 
-export default connect(mapStateToProps)(ArticleList);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    renderArticles: () => {
+      dispatch({type: 'GET_ARTICLES'});
+    }
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ArticleList);
 

@@ -68,3 +68,7 @@ div {
 #articleFooter a {
   color: #ff9d00;
 }
+
+.pointer {
+  cursor: pointer;
+}
