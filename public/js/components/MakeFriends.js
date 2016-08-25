@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import FriendList from '../containers/FriendList'
+import React from 'react';
+import FriendList from '../containers/FriendList';
 
-export default class MakeFriends extends Component {
+export default class MakeFriends extends React.Component {
   componentDidMount() {
     this.props.onFindFriends();
   }
@@ -14,11 +14,11 @@ export default class MakeFriends extends Component {
     return <div className="friendWhole">
       <Tabs search={this.search.bind(this)}/>
       <FriendList/>
-    </div>
+    </div>;
   }
 }
-class Tabs extends Component {
-  search() {
+class Tabs extends React.Component {
+  findFriend() {
     let searchCondition = {};
     if (this.refs.sex.value != '') {
       searchCondition.sex = this.refs.sex.value;
@@ -73,9 +73,9 @@ class Tabs extends Component {
           </select>
         </label>
         <label>
-          <input type="button" value="立即搜索" className="searchFriend" onClick={this.search.bind(this)}/>
+          <input type="button" value="立即搜索" className="searchFriend" onClick={this.findFriend.bind(this)}/>
         </label>
       </form>
-    </div>
+    </div>;
   }
 }

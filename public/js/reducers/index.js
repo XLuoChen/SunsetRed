@@ -3,6 +3,6 @@ import moodDiaries from './moodDiary';
 import showHappiness from './show-happiness';
 import traveller from './traveller';
 import diaryContent from './diaryContent';
-import Friends from './show-friend'
+import Friends from './show-friend';
 
 export default combineReducers({moodDiaries, showHappiness, Friends, traveller,diaryContent});
