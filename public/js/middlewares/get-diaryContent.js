@@ -5,7 +5,7 @@ export default store => next => action => {
     request.post('/diaryContent')
       .send({index:action.index})
       .end((err, res) => {
-        next({type: action.type, diaryContent:res.body})
+        next({type: action.type, diaryContent:res.body});
       });
   }
   else

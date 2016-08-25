@@ -24,7 +24,7 @@ export default class HappinessShare extends Component {
           </button>
         </div>
       </div>
-    </div>
+    </div>;
   }
 }
 
@@ -33,11 +33,11 @@ class HappinessList extends Component {
     const happinessList = this.props.filterHappiness.map((item, index) => {
       return <div key={index}>
         <PersonShow happinessItem={item}/>
-      </div>
+      </div>;
     });
     return <div>
       {happinessList}
-    </div>
+    </div>;
   }
 }
 
@@ -52,6 +52,6 @@ class PersonShow extends Component {
       <div className="personShow">
         {this.props.happinessItem.text}
       </div>
-    </div>
+    </div>;
   }
 }

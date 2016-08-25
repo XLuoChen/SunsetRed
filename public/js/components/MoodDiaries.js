@@ -13,7 +13,7 @@ export default class MoodDiary extends Component {
         </center>
         <DiaryList moodDiaries={this.props.moodDiaries}/>
       </div>
-    </div>
+    </div>;
   }
 }
 
@@ -21,9 +21,9 @@ class DiaryList extends Component {
   render() {
     return <div className="list-group">
       {this.props.moodDiaries.map((moodDiary, index)=> {
-       return  <Diary moodDiary = {moodDiary} index = {index}/>
+       return  <Diary moodDiary = {moodDiary} index = {index}/>;
       })}
-    </div>
+    </div>;
   }
 }
 
@@ -38,6 +38,6 @@ class Diary extends Component{
           <p className="list-group-item-text"> 类型：{this.props.moodDiary.sort} <br/><br/>日期：****</p>
         </div>
       </div>
-    </a>
+    </a>;
   }
 }
