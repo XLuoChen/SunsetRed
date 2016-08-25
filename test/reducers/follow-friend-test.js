@@ -8,7 +8,7 @@ describe('friend', ()=> {
       "18829291857",
       "15091671302"
     ];
-    const action = {type: "FOLLOW_FRIENDS", following};
+    const action = {type: "SET_FOLLOW_FRIENDS", following};
     expect(reducer(state, action)).to.be.deep.equal({following});
   })
 });

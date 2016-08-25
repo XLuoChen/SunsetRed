@@ -10,7 +10,7 @@ export default class FriendList extends React.Component {
             <div className="caption">
               <h3>{ele.name}</h3>
               <p>{ele.sex}&nbsp;{ele.city}&nbsp;{ele.hobby}</p>
-              <p className="btn btn-primary" role="button">关注</p>
+              <p className="btn btn-primary" role="button" onClick={this.props.onFollowFriends.bind(this,ele.id)}>关注</p>
             </div>
           </div>
         </div>
