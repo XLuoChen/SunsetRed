@@ -7,7 +7,7 @@ const moodDiaries = require('./server/routers/moodDiary');
 const friend = require('./server/routers/show-friend');
 const happiness = require('./server/routers/show-happiness');
 const traveller = require('./server/routers/traveller');
-const diaryContent = require('./server/routers/diaryContent')
+const diaryContent = require('./server/routers/diaryContent');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
