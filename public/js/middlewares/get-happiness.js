@@ -1,10 +1,10 @@
 import request from 'superagent';
 
 export default store => next => action => {
-  if (action.type === 'SET_HAPPINESS') {
+  if (action.type === 'GET_HAPPINESS') {
     request.get('/happiness')
       .end((err, res) => {
-        next({type: action.type, data: res.body})
+        next({type: 'SET_HAPPINESS', data: res.body})
       });
   }
   else

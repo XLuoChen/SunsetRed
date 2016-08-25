@@ -30,7 +30,6 @@ export default class HappinessShare extends Component {
 
 class HappinessList extends Component {
   render() {
-
     const happinessList = this.props.filterHappiness.map((item, index) => {
       return <div key={index}>
         <PersonShow happinessItem={item}/>
@@ -47,7 +46,9 @@ class PersonShow extends Component {
     return <div className="happiness">
       <img src={this.props.happinessItem.image}
            alt={this.props.happinessItem.name}/>
-      <div className="happinessTag">{this.props.happinessItem.name}</div>
+      <div className="happinessTag">
+        {this.props.happinessItem.name}
+      </div>
       <div className="personShow">
         {this.props.happinessItem.text}
       </div>
