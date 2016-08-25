@@ -5,11 +5,12 @@ const mongoClient = require('../../server/helpers/mongodb');
 describe('server', () => {
   let server;
 
-  const defaultFriends = [
-    {name: "高乐", sex: "女", city: "西安"},
-    {name: "黄丽珍", sex: "女", city: "西安"},
-    {name: "赵路", sex: "女", city: "西安"},
-    {name: "刘一林", sex: "女", city: "西安"}];
+  const defaultFriends = [{
+    following: [
+      "18829291857",
+      "15091671302"
+    ]
+  }];
 
   beforeEach((done)=> {
     mongoClient.connect(url, (err, db)=> {
@@ -25,9 +26,9 @@ describe('server', () => {
     server = require('../../server');
   });
 
-  it('responds to /friends', (done)=> {
+  it('responds to /follow', (done)=> {
     request(server)
-      .get('/friends')
-      .expect(200, '[{"name":"高乐","sex":"女","city":"西安"},{"name":"黄丽珍","sex":"女","city":"西安"},{"name":"赵路","sex":"女","city":"西安"},{"name":"刘一林","sex":"女","city":"西安"}]', done);
+      .post('/follow')
+      .expect(200, '[{"following":["18829291857","15091671302"]}]', done);
   });
 });

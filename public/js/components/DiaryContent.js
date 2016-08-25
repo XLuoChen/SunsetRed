@@ -22,6 +22,6 @@ export default class DiaryContent extends Component {
                   value={this.props.diaryContent.content}/>
         <div className="panel-footer text-right">类型：{this.props.diaryContent.sort}&nbsp;&nbsp;&nbsp;</div>
       </div>
-    </div>
+    </div>;
   }
 }

@@ -13,6 +13,6 @@ export default class Menu extends Component {
             className="glyphicon glyphicon-pencil">发表</span></Link>
         </ul>
       </nav>
-    </div>
+    </div>;
   }
 }

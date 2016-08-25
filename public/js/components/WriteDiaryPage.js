@@ -40,6 +40,6 @@ export default class WriteDiaryPage extends Component {
           </div>
         </div>
       </form>
-    </div>
+    </div>;
   }
 }

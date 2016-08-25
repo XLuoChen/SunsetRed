@@ -17,7 +17,7 @@ export default class MoodDiaries extends Component {
         </center>
         <DiaryList moodDiaries={this.props.moodDiaries}/>
       </div>
-    </div>
+    </div>;
   }
 }
 
@@ -28,7 +28,7 @@ class DiaryList extends Component {
     });
     return <div className="list-group">
       {diary}
-    </div>
+    </div>;
   }
 }
 

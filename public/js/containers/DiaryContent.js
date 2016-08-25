@@ -13,4 +13,4 @@ const mapStateToProps = (state)=> {
     diaryContent: state.moodDiaries.diaryContent
   }
 };
-export default connect(mapStateToProps, mapDispatchToProps)(DiaryContent)
+export default connect(mapStateToProps, mapDispatchToProps)(DiaryContent);

@@ -1,9 +1,9 @@
-const findData = require('../dbs/find-happiness');
+const addData = require('../dbs/add-happiness');
 const express = require('express');
 const router = express.Router();
 
-router.get('/happiness', (req, res)=> {
-  findData((result) => {
+router.post('/happinessPublish', (req, res)=> {
+  addData(req,(result) => {
     res.json(result);
   });
 });
