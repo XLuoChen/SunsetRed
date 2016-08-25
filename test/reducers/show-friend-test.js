@@ -1,8 +1,8 @@
 const reducer = require('../../public/js/reducers/show-friend');
 const expect = require('chai').expect;
 
-describe('friend', function () {
-  it('can show', function () {
+describe('friend', ()=> {
+  it('can show', ()=> {
     const state = {friends: []};
     const friends = [
       {

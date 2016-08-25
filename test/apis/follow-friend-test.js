@@ -12,7 +12,7 @@ describe('server', () => {
     ]
   }];
 
-  beforeEach(function (done) {
+  beforeEach((done)=> {
     mongoClient.connect(url, (err, db)=> {
       const collection = db.collection('users');
       collection.removeMany({}, () => {
@@ -26,7 +26,7 @@ describe('server', () => {
     server = require('../../server');
   });
 
-  it('responds to /follow', function testSlash(done) {
+  it('responds to /follow', (done)=> {
     request(server)
       .post('/follow')
       .expect(200, '[{"following":["18829291857","15091671302"]}]', done);
