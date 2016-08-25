@@ -24,7 +24,7 @@ export default class MoodDiaries extends Component {
 class DiaryList extends Component {
   render() {
     const diary = this.props.moodDiaries.map((moodDiary, index)=> {
-      return <Diary moodDiary={moodDiary} index={index}/>
+      return <Diary moodDiary={moodDiary} key={index}/>
     });
     return <div className="list-group">
       {diary}
@@ -34,7 +34,7 @@ class DiaryList extends Component {
 
 class Diary extends Component {
   render() {
-    return <a href="javascript:void(0)" className="list-group-item row" key={this.props.index}>
+    return <a href="javascript:void(0)" className="list-group-item row">
       <div className="row">
         <div className="col-md-6">
           <h4 className="list-group-item-heading">昵称：{this.props.moodDiary.name}<br/><br/><Link

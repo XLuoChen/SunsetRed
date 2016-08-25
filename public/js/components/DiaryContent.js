@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 
 export default class DiaryContent extends Component {
-  componentDidMount() {
+  componentWillMount() {
     const userId = this.props.params.userId;
     this.props.getDiaryContent(userId);
   }
+
 
   render() {
     return <div className="col-md-6 col-md-offset-3">
