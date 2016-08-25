@@ -9,11 +9,13 @@ import MakeFriends from './containers/MakeFriends';
 import getFriendsInformation from './middlewares/get-friend-information';
 import reducer from './reducers/index';
 import HappinessShare from './containers/HappinessShare';
+import HappinessPublish from './containers/HappinessPublish';
+import addHappiness from "./middlewares/add-happiness";
 import setHappiness from "./middlewares/set-happiness";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from './containers/Traveller';
 
-const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness)(createStore);
+const createStoreWithMiddleware = applyMiddleware(getFriendsInformation,setHappiness,addHappiness)(createStore);
 
 const store = createStoreWithMiddleware(reducer);
 
@@ -24,6 +26,7 @@ render(
         <IndexRoute component={HomePage}/>
         <Route path="/friends" component={MakeFriends}/>
         <Route path="/happiness" component={HappinessShare}/>
+        <Route path="/happinessPublish" component={HappinessPublish}/>
         <Route path='/moodDiary' component={MoodDiaries}/>
         <Route path="/traveller" component={Traveller}/>
       </Route>

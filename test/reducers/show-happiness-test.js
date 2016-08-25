@@ -7,14 +7,14 @@ describe('happiness', function () {
     const action = {
       type: "SET_HAPPINESS",
       data: [{
-        name: "Jake", image: "../../images/happiness-pictures/a.jpg",
+        name: "Jake", image: "../../images/happiness-pictures/00000001.jpg",
         text: "晒幸福", likedCount: 20
       }]
     };
     expect(reducer(state, action)).to.be.deep.equal({
       filterHappiness: [{
         name: "Jake",
-        image: "../../images/happiness-pictures/a.jpg",
+        image: "../../images/happiness-pictures/00000001.jpg",
         text: "晒幸福", likedCount: 20
       }]
     });
