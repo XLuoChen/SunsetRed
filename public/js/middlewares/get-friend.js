@@ -10,7 +10,11 @@ export default store => next => action => {
     request.get('/findFriends')
       .query({condition: action.condition})
       .end((err, res) => {
-        next({type: "SET_FRIENDS", friends: res.body})
+        if (res.body.length == 0) {
+          next({type: "PROMPT_MESSAGE", friends: res.body,promptMessage: '没有找到符合条件的好友'})
+        }else{
+          next({type: "SET_FRIENDS", friends: res.body});
+        }
       });
   }
   else {

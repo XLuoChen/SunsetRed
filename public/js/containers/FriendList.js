@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 
 const mapStateToProps = (state)=> {
   return {
-    friends: state.Friends.friends
+    friends: state.Friends.friends,
+    promptMessage: state.Friends.promptMessage
   }
 };
 

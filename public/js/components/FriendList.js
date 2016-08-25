@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 
 export default class FriendList extends Component {
   render() {
-    const friends = this.props.friends.map((ele, index)=> {
-      return <div className="center-block">
-      <div key={index} className="col-lg-3 col-lg-offet-3">
+        const friends = this.props.friends.map((ele, index)=> {
+      return <div key={index} className="center-block">
+      <div className="col-lg-3 col-lg-offet-3">
         <div className="thumbnail">
           <img src={`../../images/friends-pictures/${ele.imgName}`} alt="..."/>
           <div className="caption">
@@ -17,7 +17,7 @@ export default class FriendList extends Component {
         </div>
     });
     return <div className="raw">
-      {friends}
+      {this.props.promptMessage}{friends}
     </div>
   }
 }
