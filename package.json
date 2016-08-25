@@ -9,7 +9,7 @@
     "webpack": "webpack -d --watch",
     "wpw": "webpack -w",
     "coverage": "istanbul cover mocha",
-    "eslint": "eslint server.js server/** public/js/**",
+    "eslint": "eslint .",
     "refreshMongo": "babel-node ./server/tools/refreshMongo.js"
   },
   "dependencies": {
@@ -39,7 +39,8 @@
     "config": "^1.21.0",
     "css-loader": "^0.23.1",
     "eslint": "^3.2.2",
-    "eslint-plugin-react": "^6.0.0",
+    "eslint-plugin-mocha": "^4.4.0",
+    "eslint-plugin-react": "^6.1.2",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "istanbul": "^1.0.0-alpha.2",

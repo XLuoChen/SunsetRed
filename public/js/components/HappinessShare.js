@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from 'react-router';
 
 export default class HappinessShare extends Component {
   componentDidMount() {
@@ -12,9 +13,11 @@ export default class HappinessShare extends Component {
   render() {
     return <div className="center-block">
       <div className="happinessShare">
-        <button className="btn btn-primary center-block">
-          我要晒幸福
-        </button>
+        <Link to="/happinessPublish">
+          <button className="btn btn-primary center-block">
+            我要晒幸福
+          </button>
+        </Link>
         <div className="happinessList">
           <HappinessList filterHappiness={this.props.filterHappiness}/>
         </div>
@@ -24,21 +27,20 @@ export default class HappinessShare extends Component {
           </button>
         </div>
       </div>
-    </div>
+    </div>;
   }
 }
 
 class HappinessList extends Component {
   render() {
-
     const happinessList = this.props.filterHappiness.map((item, index) => {
       return <div key={index}>
         <PersonShow happinessItem={item}/>
-      </div>
+      </div>;
     });
     return <div>
       {happinessList}
-    </div>
+    </div>;
   }
 }
 
@@ -47,10 +49,12 @@ class PersonShow extends Component {
     return <div className="happiness">
       <img src={this.props.happinessItem.image}
            alt={this.props.happinessItem.name}/>
-      <div className="happinessTag">{this.props.happinessItem.name}</div>
+      <div className="happinessTag">
+        {this.props.happinessItem.name}
+      </div>
       <div className="personShow">
         {this.props.happinessItem.text}
       </div>
-    </div>
+    </div>;
   }
 }

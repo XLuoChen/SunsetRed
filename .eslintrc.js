@@ -3,7 +3,8 @@ module.exports = {
     "browser": true,
     "commonjs": true,
     "es6": true,
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
@@ -13,8 +14,12 @@ module.exports = {
     },
     "sourceType": "module"
   },
+  "globals": {
+    "React": true
+  },
   "plugins": [
-    "react"
+    "react",
+    "mocha"
   ],
   "rules": {
     "prefer-arrow-callback": "error",
@@ -32,6 +37,7 @@ module.exports = {
       "unix"
     ],
     "no-console": 0,
+    "no-unused-vars": ["error", {"args": "none"}],
     "semi": [
       "error",
       "always"
@@ -40,7 +46,8 @@ module.exports = {
       "error",
       15
     ],
-    "react/jsx-uses-vars": [2],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "max-lines": [
       "error",
       {
