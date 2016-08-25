@@ -8,7 +8,7 @@ const mapStateToProps = (state)=> {
 const mapDispatchToProps = (dispatch)=> {
   return {
     getDaries: ()=> {
-      dispatch({type: 'SET_DIARIES'});
+      dispatch({type: 'GET_DIARIES'});
     }
   }
 };
