@@ -35,6 +35,7 @@ module.exports = {
       "unix"
     ],
     "no-console": 0,
+    "no-unused-vars": ["error", {"args": "none"}],
     "semi": [
       "error",
       "always"
