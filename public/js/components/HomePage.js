@@ -24,7 +24,7 @@ export default class HomePage extends Component {
          data-slide="prev">&lsaquo;</a>
       <a className="carousel-control right" href="#myCarousel"
          data-slide="next">&rsaquo;</a>
-    </div>
+    </div>;
   }
 }
 
