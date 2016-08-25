@@ -1,9 +1,9 @@
-const findData = require('../dbs/moodDiary');
+const findData = require('../dbs/diaryContent');
 const express = require('express');
 const router = express.Router();
 
-router.post('/diaryContent', (req, res)=> {
-  findData({userId:req.body.userId},(result) => {
+router.post('/diary', (req, res)=> {
+  findData(req.body,(result) => {
     res.json(result);
   });
 });
