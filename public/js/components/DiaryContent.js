@@ -12,7 +12,8 @@ export default class DiaryContent extends Component {
         <div className="panel-heading">
          <center> <h1 className="panel-title ">日记主题：{this.props.diaryContent.title}&nbsp;&nbsp;&nbsp;&nbsp;<small>昵称：{this.props.diaryContent.name}</small></h1></center>
         </div>
-        <div className="panel-body" style={{'minHeight':'450px'}}>&nbsp;&nbsp;&nbsp;日记内容:{this.props.diaryContent.content}</div>
+        日记内容:
+        <textarea className="panel-body" style={{'minHeight':'450px' ,minWidth:'100%'}} value={this.props.diaryContent.content}/>
         <div className="panel-footer text-right">类型：{this.props.diaryContent.sort}&nbsp;&nbsp;&nbsp;</div>
       </div>
     </div>
