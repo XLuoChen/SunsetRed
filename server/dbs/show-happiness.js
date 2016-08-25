@@ -11,7 +11,7 @@ function findData(callback) {
           image: `../../images/happiness-pictures/${happinessItem.image}`,
           text: happinessItem.text,
           likedCount: happinessItem.likedCount
-        }
+        };
       });
 
       let filterHappiness = [];
@@ -29,7 +29,7 @@ function findData(callback) {
 
 function randomFilterHappiness(happiness, filterCount) {
   happiness.sort(() => {
-    return Math.random() > 0.5 ? -1 : 1
+    return Math.random() > 0.5 ? -1 : 1;
   });
 
   return happiness.slice(0, filterCount);

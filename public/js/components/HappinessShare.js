@@ -1,13 +1,12 @@
 import React, {Component} from "react";
-import {store} from '../main';
 
 export default class HappinessShare extends Component {
   componentDidMount() {
-    store.dispatch({type: 'SET_HAPPINESS'});
+    this.props.getFilterHappiness();
   }
 
   setFilterHappiness() {
-    store.dispatch({type: 'SET_HAPPINESS'});
+    this.props.getFilterHappiness();
   }
 
   render() {
