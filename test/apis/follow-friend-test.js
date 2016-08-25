@@ -12,9 +12,9 @@ describe('server', () => {
     ]
   }];
 
-  beforeEach(function (done) {
+  beforeEach((done)=> {
     mongoClient.connect(url, (err, db)=> {
-      const collection = db.collection('users');
+      const collection = db.collection('friendsCol');
       collection.removeMany({}, () => {
         collection.insert(defaultFriends, (err, result)=> {
           db.close();
@@ -26,7 +26,7 @@ describe('server', () => {
     server = require('../../server');
   });
 
-  it('responds to /follow', function testSlash(done) {
+  it('responds to /follow', (done)=> {
     request(server)
       .post('/follow')
       .expect(200, '[{"following":["18829291857","15091671302"]}]', done);

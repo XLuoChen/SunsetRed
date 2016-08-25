@@ -29,6 +29,6 @@ describe('server', () => {
   it('responds to /happiness', (done) => {
     request(server)
       .get('/happiness')
-      .expect(200, '[{"name":"Jake","image":"../../images/happiness-pictures/a.jpg","text":"晒幸福","likedCount":20}]', done);
+      .expect(200, '[{"name":"Jake","image":"../../images/happiness-pictures/00000001.jpg","text":"晒幸福","likedCount":20}]', done);
   });
 });

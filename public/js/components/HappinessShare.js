@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from 'react-router';
 
 export default class HappinessShare extends Component {
   componentDidMount() {
@@ -12,9 +13,11 @@ export default class HappinessShare extends Component {
   render() {
     return <div className="center-block">
       <div className="happinessShare">
-        <button className="btn btn-primary center-block">
-          我要晒幸福
-        </button>
+        <Link to="/happinessPublish">
+          <button className="btn btn-primary center-block">
+            我要晒幸福
+          </button>
+        </Link>
         <div className="happinessList">
           <HappinessList filterHappiness={this.props.filterHappiness}/>
         </div>

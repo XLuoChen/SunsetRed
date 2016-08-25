@@ -8,4 +8,11 @@ const mapStateToProps = (state)=> {
   };
 };
 
-export default connect(mapStateToProps)(FriendList);
+const mapDispatchToProps = (dispatch)=> {
+  return {
+    onFollowFriends: (id)=> {
+      dispatch({type: "FOLLOW_FRIENDS",id});
+    }
+  };
+};
+export default connect(mapStateToProps,mapDispatchToProps)(FriendList);
