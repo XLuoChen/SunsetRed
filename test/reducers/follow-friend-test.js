@@ -10,7 +10,7 @@ describe('friend', ()=> {
     ];
     const action = {type: "SET_FOLLOW_FRIENDS", following};
     expect(reducer(state, action)).to.be.deep.equal({following});
-  })
+  });
 });
 
 

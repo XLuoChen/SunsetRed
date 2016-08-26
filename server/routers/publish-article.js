@@ -10,7 +10,7 @@ router.post('/publication', (req, res)=> {
       date: new Date().toLocaleDateString(),
       likedCount: 0,
       commentCount: 0
-    }])
+    }]);
 });
 
 module.exports = router;

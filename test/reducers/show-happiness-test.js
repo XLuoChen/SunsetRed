@@ -18,5 +18,5 @@ describe('happiness', ()=> {
         text: "晒幸福", likedCount: 20
       }]
     });
-  })
+  });
 });

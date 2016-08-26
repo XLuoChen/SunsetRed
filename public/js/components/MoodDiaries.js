@@ -24,7 +24,7 @@ export default class MoodDiaries extends Component {
 class DiaryList extends Component {
   render() {
     const diary = this.props.moodDiaries.map((moodDiary, index)=> {
-      return <Diary moodDiary={moodDiary} key={index}/>
+      return <Diary moodDiary={moodDiary} key={index}/>;
     });
     return <div className="list-group">
       {diary}
@@ -44,6 +44,6 @@ class Diary extends Component {
           <p className="list-group-item-text"> 类型：{this.props.moodDiary.sort} <br/><br/>日期：****</p>
         </div>
       </div>
-    </a>
+    </a>;
   }
 }
