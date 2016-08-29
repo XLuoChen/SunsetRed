@@ -20,8 +20,9 @@ import getHappiness from "./middlewares/get-happiness";
 import getArticleList from './middlewares/get-articleList'
 import MoodDiaryLists from "./middlewares/get-diaryLists";
 import geDiaryContent from './middlewares/get-diaryContent';
+import publishTravelArticle from './middlewares/publish-travel-article';
 
-const createStoreWithMiddleware = applyMiddleware(addHappiness, getFriendsInformation, getHappiness, MoodDiaryLists, geDiaryContent, getArticleList)(createStore);
+const createStoreWithMiddleware = applyMiddleware(addHappiness, getFriendsInformation, getHappiness, MoodDiaryLists, geDiaryContent, getArticleList, publishTravelArticle)(createStore);
 import reducer from "./reducers/index";
 
 const store = createStoreWithMiddleware(reducer);
