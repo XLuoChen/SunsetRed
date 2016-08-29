@@ -7,7 +7,9 @@ export default class TravellerArticlePublication extends Component {
     this.refs.title.value = '';
     const content = this.refs.content.value;
     this.refs.content.value = '';
-    this.props.publish(title, content);
+    if (title && content){
+      this.props.publish(title, content);
+    }
   }
 
   render() {
