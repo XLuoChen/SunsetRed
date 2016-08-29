@@ -10,6 +10,7 @@ const traveller = require('./server/routers/traveller');
 const diaryContent = require('./server/routers/diaryContent');
 const publishArticle = require('./server/routers/publish-article');
 const followFriend = require('./server/routers/follow-friend');
+const publishTravelArticle = require('./server/routers/publish-travel-article');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -22,6 +23,7 @@ app.use('/', traveller);
 app.use('/', diaryContent);
 app.use('/', publishArticle);
 app.use('/', followFriend);
+app.use('/', publishTravelArticle);
 
 app.get('*', (request, response) => {
   response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
