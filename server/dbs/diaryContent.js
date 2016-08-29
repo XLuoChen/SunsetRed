@@ -2,10 +2,10 @@ const url = require('../helpers/get-url');
 const MongoClient = require('../helpers/mongodb');
 
 function findData(userId, callback) {
-  MongoClient.connect(url, function (err, db) {
+  MongoClient.connect(url, (err, db) => {
     const collection = db.collection('diarycol');
     const findCondition = userId === {} ? {} : userId;
-    collection.find(findCondition, {_id: 0}).toArray(function (err, result) {
+    collection.find(findCondition, {_id: 0}).toArray((err, result) => {
       callback(result);
     });
   });

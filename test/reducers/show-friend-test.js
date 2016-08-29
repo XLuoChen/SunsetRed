@@ -13,7 +13,7 @@ describe('friend', ()=> {
     ];
     const action = {type: "SET_FRIENDS", friends};
     expect(reducer(state, action)).to.be.deep.equal({friends});
-  })
+  });
 });
 
 

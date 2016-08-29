@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import {render} from "react-dom";
 import {createStore, applyMiddleware} from "redux";
 import {Provider} from "react-redux";
@@ -17,7 +17,7 @@ import WriteDiaryPage from './containers/WriteDiaryPage';
 
 import getFriendsInformation from "./middlewares/get-friend";
 import getHappiness from "./middlewares/get-happiness";
-import getArticleList from './middlewares/get-articleList'
+import getArticleList from './middlewares/get-articleList';
 import MoodDiaryLists from "./middlewares/get-diaryLists";
 import geDiaryContent from './middlewares/get-diaryContent';
 import publishTravelArticle from './middlewares/publish-travel-article';

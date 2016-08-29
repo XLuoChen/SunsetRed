@@ -22,8 +22,8 @@ describe('traveller', () => {
         collection.insertOne(defaultArticles, (err, result) => {
           db.close();
           done();
-        })
-      })
+        });
+      });
     });
     server = require('../../server');
   });
@@ -31,6 +31,6 @@ describe('traveller', () => {
   it('returns articles', (done) => {
     request(server)
       .get('/traveller')
-      .expect(200, defaultArticles.articles, done)
+      .expect(200, defaultArticles.articles, done);
   });
 });

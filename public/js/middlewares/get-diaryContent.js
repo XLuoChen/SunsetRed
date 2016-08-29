@@ -5,7 +5,7 @@ export default store => next => action => {
     request.post('/diary')
       .send({userId: parseInt(action.userId)})
       .end((err, res) => {
-        next({type: 'SET_CONTENT', diaryContent: res.body[0]})
+        next({type: 'SET_CONTENT', diaryContent: res.body[0]});
       });
   }
   else
