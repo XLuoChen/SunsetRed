@@ -4,7 +4,9 @@ import Menu from './Menu';
 export default class TravellerArticlePublication extends Component {
   onPublish() {
     const title = this.refs.title.value;
+    this.refs.title.value = '';
     const content = this.refs.content.value;
+    this.refs.content.value = '';
     this.props.publish(title, content);
   }
 
