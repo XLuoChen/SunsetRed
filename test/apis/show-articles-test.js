@@ -28,7 +28,7 @@ describe('traveller', () => {
     server = require('../../server');
   });
 
-  it('responds to /traveller', (done) => {
+  it('returns articles', (done) => {
     request(server)
       .get('/traveller')
       .expect(200, defaultArticles.articles, done)
