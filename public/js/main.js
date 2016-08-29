@@ -11,7 +11,7 @@ import addHappiness from "./middlewares/add-happiness";
 import MoodDiaries from "./containers/MoodDiaries";
 import Traveller from "./containers/Traveller";
 import HomePage from "./components/HomePage";
-import TravellerArticlePublication from './components/TravellerArticlePublication';
+import TravellerArticlePublication from './containers/TravellerArticlePublication';
 import DiaryContent from './containers/DiaryContent';
 import WriteDiaryPage from './containers/WriteDiaryPage';
 
