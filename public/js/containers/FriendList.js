@@ -12,6 +12,9 @@ const mapDispatchToProps = (dispatch)=> {
   return {
     onFollowFriends: (id)=> {
       dispatch({type: "FOLLOW_FRIENDS",id});
+    },
+    cancelFollow: (id) => {
+      dispatch({type:'CANCEL_FOLLOW',id});
     }
   };
 };

@@ -9,11 +9,10 @@ function followFriend(id, callback) {
         const ids = [];
         ids.push(id);
         collection.insertOne({follow:ids},()=>{
-          console.log(result);
           callback(result);
         });
       }else{
-        collection.update({},{$push:{follow:id}},()=>{
+        collection.update({},{$addToSet:{follow:id}},()=>{
           callback(result);
         });
       }

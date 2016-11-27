@@ -1,4 +1,5 @@
 const followFriend = require('../dbs/follow-friend');
+const cancelFollowFriend = require('../dbs/cancel-follow-friend');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -10,6 +11,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 router.post('/follow', (req, res)=> {
   followFriend(req.body.id, (result) => {
+    res.json(result);
+  });
+});
+
+router.post('/cancelFollow', (req, res)=> {
+  cancelFollowFriend(req.body.id, (result) => {
     res.json(result);
   });
 });
